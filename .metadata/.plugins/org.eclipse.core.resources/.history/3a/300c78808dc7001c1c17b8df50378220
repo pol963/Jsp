@@ -1,0 +1,22 @@
+package kr.web.controller;
+
+import java.io.*;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+//서블릿의 골격. 서블릿은 새로운프로그램이 아닌 그냥 자바 입니다.
+
+public class HelloServlet extends HttpServlet{
+
+	//service메서드는 매개변수로 요청을 받는객체 응답을 할수있는 응답객체가 있어야 합니다.
+	// req요청받고 resp응답해줌.
+	public void service(HttpServletRequest req , HttpServletResponse resp) 
+		throws ServletException,IOException{
+		
+		
+		
+	}
+	
+	
+}
