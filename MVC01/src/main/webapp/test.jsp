@@ -7,8 +7,15 @@
 	for(int i = 1 ; i <= 10 ; i++){
 		sum += i;
 	}
+	
+	int num = 0;
+	for(int i = 1 ; i <= 100 ; i++){
+		num += i;
+	}
 
 %>
+    
+    
     
 <!DOCTYPE html>
 <html>
@@ -17,6 +24,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%=sum %>
+<%=sum %> <br>
+<%=num %>
+
 </body>
 </html>
