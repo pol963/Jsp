@@ -1,12 +1,15 @@
 package kr.bit.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.bit.model.MemberDAO;
 import kr.bit.model.MemberVO;
 
 @WebServlet("/memberInsert.do")
@@ -14,6 +17,9 @@ public class MemberInsertController extends HttpServlet {
   
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		//한글처리 -> 기본적으로 데이터는 1byte씩 주고받기때문에 2byte인 한글은 깨질게 됩니다. 해결하기위해 문자를 2byte씩 주고받게끔 요청하게 됩니다.
+		request.setCharacterEncoding("utf-8");
 		
 		//1.파라메터 수집
 		
@@ -35,6 +41,20 @@ public class MemberInsertController extends HttpServlet {
 		
 		System.out.println(vo.toString());
 		
+		
+		//Model과 연동하기.
+		MemberDAO dao = new MemberDAO();
+		int cnt =dao.memberInsert(vo);
+		
+		PrintWriter out = response.getWriter();
+		
+		if(cnt > 0) {
+			out.println("insert success");
+		}else {
+
+			throw new ServletException("Not insert");
+			
+		}
 		
 
 }
