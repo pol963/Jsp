@@ -11,7 +11,7 @@ public class MemberDAO {
 	//sql전송할수있는객체.
 	private PreparedStatement ps;
 	
-	//DB에 있는 데이터를 가져와서 저장하는 객체.
+	//DB에 있는 데이터를 가져와서 저장하는 객체. 결과의 집합을 가지고 있는 객체.
 	private ResultSet rs;
 	
 	
@@ -53,12 +53,10 @@ public class MemberDAO {
 			
 			//getConnect()메서드를 호출해 동작하여 conn객체를 만들어줘서 DB와 연결한뒤 진행.
 			getConnect();
-			
 			int cnt = -1;
 			
 			//SQL을 DB에 전송하는 객체.
 			try {
-				
 				//미리 DB에 날려서 오류가있는지 확인. 혹은 미리 컴파일을 해놓고 ?값은 나중에줘서 속도를 빠르게하기위해 먼저 DB에 .
 				ps=conn.prepareStatement(sql); //ps는 이미 컴파일된 SQL을 가지고있습니다. "컴파일"
 				
@@ -72,14 +70,56 @@ public class MemberDAO {
 			
 				//성공한 low만큼 숫자가넘어옵니다.
 				cnt = ps.executeUpdate(); //실제 전송 "실행"
-			
 			} catch (Exception e) {
 				e.printStackTrace();
+			}finally { //에러에 유무에 상관없이 무조건 실행되는 블럭.
+				dbClose();
 			}
 			return cnt; //성공시1 실패면0
+		}//memberInsert
+		
+		
+		//회원 전체 리스트 가져오기. 회원한명->VO를 이용 // 회원 전체 -> ArrayList를 이용하는게 일반적.
+		public void memberList() {
 			
-		}
+			//DB에서 사용하기 위한 SQL만들기.
+			String SQL = "Select * from member";
+			
+			//DB연결
+			getConnect();
+			
+			//DB작업이기에 예외처리해주기.
+			try {
+				//sql문 컴파일.
+				ps = conn.prepareStatement(SQL);
+				//rs는 실질적 바로 데이터를 가르키고 있는것이 아니라 테이블결과의 첫번째 즉 num,id,name...등이있는 컬럼을 가르키고 있습니다.
+				//따라서 next()라는 메서드를 사용하면 next메서드는 다음컬럼으로 이동하는 메서드입니다.
+				//이동하고 데이터가 있다면 true없다면 false를 반환합니다.
+				//즉 rs.next()를 처음 실행하면 num,id...등이 있는 컬럼에서 다음컬럼 으로 이동하고 데이타가 있다면 true 없다면 false를 반환합니다.
+				rs = ps.executeQuery();
+				
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				dbClose();
+			}
+			
+		}//memberList
 	
+		
+		//데이터 베이스 연결 끊기 
+		public void dbClose() {
+			try {
+				if(rs != null) rs.close();
+				if(ps != null) ps.close();
+				if(conn != null) conn.close();
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+		
 	
 }
 

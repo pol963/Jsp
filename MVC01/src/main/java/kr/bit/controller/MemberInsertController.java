@@ -44,6 +44,7 @@ public class MemberInsertController extends HttpServlet {
 		
 		//Model과 연동하기.
 		MemberDAO dao = new MemberDAO();
+		//Model의 DAO클래스의 memberInsert메서드를 이영하여 vo에 담긴 회원정보를 DB에 저장.
 		int cnt =dao.memberInsert(vo);
 		
 		PrintWriter out = response.getWriter();

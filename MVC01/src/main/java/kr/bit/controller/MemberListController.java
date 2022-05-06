@@ -7,13 +7,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.bit.model.MemberDAO;
+
 @WebServlet("/memberList.do")
 public class MemberListController extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
-		//클라이언트의 요청 받기.
+		//1. 클라이언트의 요청 받기(맵핑에 의해 memberList.do) //넘어오는 파라미터 값은 없기에 response만 사용.
+		
+		
+		//2. 회원 전체 리스트 가져오기 -> Model의 JDBC사용. -> DB와 연동하여 데이터를 Model로 가져와 다시 Controller로 가져오기.
+		MemberDAO dao = new MemberDAO();
+		
+		//3. 회원 전체 리스트를 HTML로 만들어서 응답하기.
 		
 		
 		
