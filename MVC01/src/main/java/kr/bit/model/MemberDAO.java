@@ -3,6 +3,7 @@ package kr.bit.model;
 //JDBC.
 
 import java.sql.*;
+import java.util.ArrayList;
 public class MemberDAO {
 
 	//DB는 기본적으로 커넥션이 필요.
@@ -80,7 +81,7 @@ public class MemberDAO {
 		
 		
 		//회원 전체 리스트 가져오기. 회원한명->VO를 이용 // 회원 전체 -> ArrayList를 이용하는게 일반적.
-		public void memberList() {
+		public ArrayList<MemberVO> memberList() {
 			
 			//DB에서 사용하기 위한 SQL만들기.
 			String SQL = "Select * from member";
@@ -88,15 +89,36 @@ public class MemberDAO {
 			//DB연결
 			getConnect();
 			
+			//담기위한 ArrayList
+			ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+			
 			//DB작업이기에 예외처리해주기.
 			try {
 				//sql문 컴파일.
 				ps = conn.prepareStatement(SQL);
+				rs = ps.executeQuery();
+				
 				//rs는 실질적 바로 데이터를 가르키고 있는것이 아니라 테이블결과의 첫번째 즉 num,id,name...등이있는 컬럼을 가르키고 있습니다.
 				//따라서 next()라는 메서드를 사용하면 next메서드는 다음컬럼으로 이동하는 메서드입니다.
 				//이동하고 데이터가 있다면 true없다면 false를 반환합니다.
 				//즉 rs.next()를 처음 실행하면 num,id...등이 있는 컬럼에서 다음컬럼 으로 이동하고 데이타가 있다면 true 없다면 false를 반환합니다.
-				rs = ps.executeQuery();
+				while(rs.next()) {
+					//데이터 가져오기.
+					int num = rs.getInt("num");
+					String id = rs.getString("id");
+					String pass = rs.getString("pass");
+					String name = rs.getString("name");
+					int age = rs.getInt("age");
+					String email = rs.getString("email");
+					String phone = rs.getString("phone");
+					
+					//데이터 묶기.
+					MemberVO vo = new MemberVO(num, id, pass, name, age, email, phone);
+					
+					//데이터 담기.
+					list.add(vo);
+					
+				}
 				
 				
 			} catch (Exception e) {
@@ -104,6 +126,8 @@ public class MemberDAO {
 			}finally {
 				dbClose();
 			}
+			
+			return list;
 			
 		}//memberList
 	
