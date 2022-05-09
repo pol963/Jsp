@@ -47,6 +47,7 @@ public class MemberListController extends HttpServlet {
 			out.println("<th>나이</th>");
 			out.println("<th>이메일</th>");
 			out.println("<th>전화번호</th>");
+			out.println("<th>삭제</th>");
 			out.println("</tr>");
 			out.println("</thead>");
 		out.println("<body>");
@@ -54,17 +55,18 @@ public class MemberListController extends HttpServlet {
 		for(MemberVO vo : list ) {
 			out.println("<tr>");
 				out.println("<td>"+vo.getNum()+"</td>");
-				out.println("<td>"+vo.getId()+"</td>");
+				out.println("<td><a href='/MVC01/memberContent.do?num="+vo.getNum()+"'>"+vo.getId()+"</a></td>");
 				out.println("<td>"+vo.getPass()+"</td>");
 				out.println("<td>"+vo.getName()+"</td>");
 				out.println("<td>"+vo.getAge()+"</td>");
 				out.println("<td>"+vo.getEmail()+"</td>");
 				out.println("<td>"+vo.getPhone()+"</td>");
+				out.println("<th><a href='/MVC01/memberDelete.do?num="+vo.getNum()+"'>삭제</a></th>");
 			out.println("</tr>");
 		}
 		out.println("</tbody>");
 		out.println("<tr>");
-		out.println("<td colspan='7' align='center'>");
+		out.println("<td colspan='8' align='center'>");
 		out.println("<a href='member/memberRegister.html'>회원가입</a>");
 		out.println("</td>");
 		out.println("</tr>");

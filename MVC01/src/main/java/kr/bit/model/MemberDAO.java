@@ -130,6 +130,23 @@ public class MemberDAO {
 			return list;
 			
 		}//memberList
+		
+		//회원삭제메서드 파라미터는 어떤회원을 삭제할 것인지.
+		public int memberDelete(int num) {
+			String SQL = "delete from member where num=?";
+			getConnect();
+			int cnt = -1;
+			try {
+				ps = conn.prepareStatement(SQL);
+				ps.setInt(1, num);
+				cnt=ps.executeUpdate();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				dbClose();
+			}
+			return cnt;
+		}//memberDelete
 	
 		
 		//데이터 베이스 연결 끊기 
@@ -142,7 +159,10 @@ public class MemberDAO {
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
-		}
+		}//dbClose
+		
+		
+		
 		
 	
 }
