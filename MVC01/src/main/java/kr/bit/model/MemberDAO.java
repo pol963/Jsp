@@ -148,6 +148,66 @@ public class MemberDAO {
 			return cnt;
 		}//memberDelete
 	
+		//회원 상세보기 VO에 한명의 정보만 담아서 넘겨주기.
+		public MemberVO memberContent(int num) {
+			String SQL ="select * from member where num=?";
+			getConnect();
+			MemberVO vo=null;
+			try {
+				ps=conn.prepareStatement(SQL);
+				ps.setInt(1, num);
+				rs=ps.executeQuery();
+				
+				if(rs.next()) {//next->커서를 한칸뒤로 이동하여 데이터가 있다면 참. 없다면 거짓.
+					//데이터가 있을시 (참) 데이터를 가져와서VO로 묶어주기. -> 회원 한명의 정보만.
+					num = rs.getInt("num");
+					String id = rs.getString("id");
+					String pass = rs.getString("pass");
+					String name = rs.getString("name");
+					int age = rs.getInt("age");
+					String email = rs.getString("email");
+					String phone = rs.getString("phone");
+					//묶기. vo는 지역변수.
+					vo = new MemberVO(num, id, pass, name, age, email, phone);
+					
+				}
+		
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				dbClose();
+			}
+			return vo;
+			
+		}//memberContent
+		
+		
+		//회원정보수정.
+		public int memberUpdate(MemberVO vo) {
+			//where -> 조건.
+			String SQL ="update member set age=?, email=?, phone=? where num=?";
+			getConnect();
+			int cnt =-1;
+			
+			try {
+				ps=conn.prepareStatement(SQL);
+				ps.setInt(1, vo.getAge());
+				ps.setString(2, vo.getEmail());
+				ps.setString(3, vo.getPhone());
+				ps.setInt(4, vo.getNum());
+				
+				
+				cnt=ps.executeUpdate();
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				dbClose();
+			}
+			return cnt;
+			
+		}
+		
 		
 		//데이터 베이스 연결 끊기 
 		public void dbClose() {
