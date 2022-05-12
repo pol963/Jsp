@@ -154,7 +154,7 @@
 	<!-- path -> url에 지정한 경로(/web)가 넘거왓을때 // docBase -> web안의 경로중 webapp디렉토리로 찾아가기.  -->
 	<Context docBase="C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\eGovFrame-4.0.0\workspace.edu\WEB\webapp" path="/web"/>
 		
-      <Context docBase="C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MVC01" path="/MVC01" reloadable="true" source="org.eclipse.jst.jee.server:MVC01"/></Host>
+      <Context docBase="C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MVC01" path="/MVC01" reloadable="true" source="org.eclipse.jst.jee.server:MVC01"/><Context docBase="C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MVC02" path="/MVC02" reloadable="true" source="org.eclipse.jst.jee.server:MVC02"/></Host>
     </Engine>
   </Service>
 </Server>
