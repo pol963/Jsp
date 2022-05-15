@@ -4208,3 +4208,63 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 02:05:32.857
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BdhQrKsx => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:14.025
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:14.025
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@b816292[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:14.025
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.139
+!MESSAGE Boot LS startup time from start to initialized: 3113ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.268
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.jLsruCPMisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.269
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.269
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.270
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.270
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.271
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.jLsruCPM => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.272
+!MESSAGE classpath=47 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.274
+!MESSAGE buffering callback sts4.classpath.jLsruCPM MVC01 false 47
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.275
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.277
+!MESSAGE classpath=47 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.278
+!MESSAGE buffering callback sts4.classpath.jLsruCPM MVC02 false 47
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.279
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.280
+!MESSAGE classpath=18 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.282
+!MESSAGE buffering callback sts4.classpath.jLsruCPM WEB false 18
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.282
+!MESSAGE executing callback sts4.classpath.jLsruCPM 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-05-16 04:18:17.635
+!MESSAGE executing callback sts4.classpath.jLsruCPM SUCCESS [done]
