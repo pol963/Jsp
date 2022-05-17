@@ -15,12 +15,15 @@ public class ForwardController extends HttpServlet {
 		
 		// 1. forward 실습. 
 		String data = "apple";
+		String age = "30";
+		String email = "aaa@aaaa.com";
 		
 		//Controller에서 View페이지로 전환하는 방법.
 		// 1. redirect 
-		// 2. forward
-		response.sendRedirect("");
+		response.sendRedirect("view/result.jsp?data="+data+"&age="+age+"&email="+email);
+		  
 		
+		// 2. forward
 		
 		
 	}
