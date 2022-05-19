@@ -5,7 +5,92 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-05-16T05:32:00Z</updated>
+  <updated>2022-05-18T19:00:00Z</updated>
+  <entry>
+    <title>Spring Security 6.0.0-M5 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/05/18/spring-security-6-0-0-m5-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Steve Riesenberg</name>
+    </author>
+    <id>tag:spring.io,2022-05-18:4797</id>
+    <updated>2022-05-18T19:00:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Security &lt;code&gt;6.0.0-M5&lt;/code&gt; is available now.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This release includes dependency upgrades, bug fixes, and minor enhancements as well as a fix for a bug where the &lt;code&gt;StrictHttpFirewall&lt;/code&gt; incorrectly rejects valid CJKV characters. The milestone contains a few noteworthy changes:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Authorization on Every Dispatch Type&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change the default of shouldFilterAllDispatchTypes to true&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Default to SecurityContextHolderFilter instead of SecurityContextPersistenceFilter&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove SAML Deprecations&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;See the release notes &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/6.0.0-M4"&gt;here&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/6.0.0-M5"&gt;here&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-security/reference/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Security 5.7.1, 5.6.5, 5.5.8 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/05/18/spring-security-5-7-1-5-6-5-5-5-8-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Marcus Hert Da Coregio</name>
+    </author>
+    <id>tag:spring.io,2022-05-18:4796</id>
+    <updated>2022-05-18T11:00:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;A new round of releases for Spring Security is available now. The new releases fix a bug where the &lt;code&gt;StrictHttpFirewall&lt;/code&gt; incorrectly rejects valid CJKV characters.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Please take a look at the &lt;a href="https://github.com/spring-projects/spring-security/releases"&gt;release notes&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - May 17th, 2022</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/05/17/this-week-in-spring-may-17th-2022" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-05-17:4795</id>
+    <updated>2022-05-17T23:05:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I am in beautiful Barcelona, Spain, this week, ahead of the upcoming Spring I/O show. I just spent a wonderful week in amazing England, meeting old friends, speaking at Devoxx UK, etc. &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/05/12/a-bootiful-podcast-easymock-contributor-java-champion-and-java-luminary-henri-tremblay"&gt;A Bootiful Podcast: EasyMock contributor, Java Champion, and Java luminary Henri Tremblay&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Also, while we&amp;rsquo;re on the topic of Spring Boot 2.7, remember that Spring for GraphQL is also 1.0 this week! I&amp;rsquo;m so excited :)&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blog.devgenius.io/example-of-spring-cloud-function-with-aws-lambda-25af76c82916?gi=1306ed836953"&gt;Example of Spring Cloud Function with AWS Lambda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://activiti.gitbook.io/activiti-7-developers-guide/"&gt;I love this - the Activiti 7 developer&amp;rsquo;s guide - showcases some cool patterns and principles for building service-centric workflow solutions with Spring Boot and Activiti &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/maciejwalkowiak/status/1525730129871355905?s=12&amp;t=tbiFaeV-P1c1lrJ2Uu8a7w"&gt;a handy tip from Maciej Walkowiak on Twitter that Spring Boot 2.7 (due - :checks notes: - &lt;em&gt;this week&lt;/em&gt;!) adds native support for Jackson Mixins with &lt;code&gt;@JsonMixin&lt;/code&gt; annotation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://tanzucommunityedition.io/posts/tanzu-community-edition-012-speeds-developer-time-to-productivity/"&gt;Speed time to developer productivity with v0.12 release of VMware Tanzu Community Edition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://apurvsheth.medium.com/spring-boot-serverless-aws-lambda-with-api-gateway-258f48b7f22f"&gt;Spring Boot — Serverless AWS Lambda With API Gateway | by Apurv Sheth | May, 2022 | Medium&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/05/13/spring-data-2021-2-and-2022-0-m4-released"&gt;Spring Data 2021.2 and 2022.0 M4 released.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/05/11/spring-framework-5-3-20-and-5-2-22-available-now"&gt;Spring Framework 5.3.20 and 5.2.22 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/05/12/spring-framework-6-0-0-m4-available-now"&gt;Spring Framework 6.0.0-M4 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://talktotheduck.dev/spring-transaction-debugging-in-production-with-lightrun"&gt;Spring Transaction Debugging in Production with Lightrun&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoworld.com/article/2076153/code-generation-using-javadoc.html"&gt;this article by our own dr. Mark Pollack was written in 1999 and laid the groundwork for what would become EJBDoclet and XDoclet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=A1V71peRNn0"&gt;&#x1f680; New in Spring Framework 6: HTTP Interfaces&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/05/16/volume-populators-beta/"&gt;Blog: Kubernetes 1.24: Volume Populators Graduate to Beta&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/05/13/grpc-probes-now-in-beta/"&gt;Blog: Kubernetes 1.24: gRPC container probes in beta&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>CVE-2022-22976: BCrypt skips salt rounds for work factor of 31</title>
     <link rel="alternate" href="https://spring.io/blog/2022/05/15/cve-2022-22976-bcrypt-skips-salt-rounds-for-work-factor-of-31" />
@@ -684,53 +769,6 @@ dependencyManagement {&#xD;
 &lt;p&gt;Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.7.0-RC1/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.6.7 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/04/21/spring-boot-2-6-7-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2022-04-21:4776</id>
-    <updated>2022-04-21T11:25:20Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;2.6.7&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.6.7"&gt;38 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.6.7/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE report published for Spring Security OAuth</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/04/21/cve-report-published-for-spring-security-oauth" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Joe Grandja</name>
-    </author>
-    <id>tag:spring.io,2022-04-21:4774</id>
-    <updated>2022-04-21T09:00:00Z</updated>
-    <content type="html">&lt;p&gt;We have released Spring Security OAuth 2.5.2 to address the following CVE report.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22969"&gt;CVE-2022-22969: Denial-of-Service (DoS) in spring-security-oauth2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This vulnerability exposes OAuth 2.0 Client applications only.&lt;/p&gt;
-&lt;p&gt;Please review the information in the CVE report and upgrade immediately.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.5.13 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/04/21/spring-boot-2-5-13-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Moritz Halbritter</name>
-    </author>
-    <id>tag:spring.io,2022-04-21:4775</id>
-    <updated>2022-04-21T08:51:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;2.5.13&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.5.13"&gt;31 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.5.13/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

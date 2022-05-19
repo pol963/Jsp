@@ -52,8 +52,8 @@ public class MemberInsertController extends HttpServlet {
 		if(cnt > 0) {
 			//out.println("insert success");
 			
-			//다시 회원보기로 이동하기. /MVC01/memberList.do
-			response.sendRedirect("/MVC01/memberList.do");
+			//다시 회원보기로 이동하기. /MVC03/memberList.do
+			response.sendRedirect("/MVC03/memberList.do");
 		}else {
 
 			throw new ServletException("Not insert");
