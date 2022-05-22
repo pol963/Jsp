@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="cnt" value="7" />
     
 <!DOCTYPE html>
 <html>
@@ -10,15 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<c:if test="${cnt%2==0}">
-짝수입니다.
-</c:if>
-<c:if test="${cnt%2!=0}">
-홀수입니다.
-</c:if>
-
-
-
+<!-- 자바의 for문을 태그문으로 변환. -->
+<c:forEach var="i" begin="1" end="5" step="1">
+	
+</c:forEach>
 </body>
 </html>
