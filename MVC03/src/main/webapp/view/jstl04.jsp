@@ -11,7 +11,7 @@
 <body>
 <!-- 자바의 for문을 태그문으로 변환. -->
 <c:forEach var="i" begin="1" end="5" step="1">
-	
+	<font size="${i}">forEach 반복 태그에 의한 반복${i}</font><br>
 </c:forEach>
 </body>
 </html>
