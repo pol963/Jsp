@@ -4,9 +4,11 @@
     
 <%
 	
-	MemberVO vo =  (MemberVO)request.getAttribute("vo");
+	//MemberVO vo =  (MemberVO)request.getAttribute("vo");
 
 %>
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,47 +21,47 @@
 </head>
 <body>
 	<form action="memberUpdate.do" method="post">
-	<input type="hidden" name="num" value="<%=vo.getNum()%>"/>
+	<input type="hidden" name="num" value="${vo.num}"/>
 	<table class="table table-bordered">
-	<% if(vo!=null){ %>
+<c:if test="${vo!=null}">
 		<tr>
-			<td colspan="2"><%=vo.getName()%> 회원의 상세보기</td>
+			<td colspan="2">${vo.name} 회원의 상세보기</td>
 		</tr>
 		<tr>
 			<td>번호</td>
-			<td><%=vo.getNum()%></td>
+			<td>${vo.num}</td>
 		</tr>
 		<tr>
 			<td>아이디</td>
-			<td><%=vo.getId()%></td>
+			<td>${vo.id}</td>
 		</tr>
 		<tr>
 			<td>비밀번호</td>
-			<td><%=vo.getPass()%></td>
+			<td>${vo.pass}</td>
 		</tr>
 		<tr>
 			<td>이름</td>
-			<td><%=vo.getName()%></td>
+			<td>${vo.name}</td>
 		</tr>
 		<tr>
 			<td>나이</td>
-			<td><input type="text" name="age" value="<%=vo.getAge()%>" /></td>
+			<td><input type="text" name="age" value="${vo.age}" /></td>
 		</tr>
 		<tr>
 			<td>이메일</td>
-			<td><input type="text" name="email" value="<%=vo.getEmail()%>" /></td>
+			<td><input type="text" name="email" value="${vo.email}" /></td>
 		</tr>
 		<tr>
 			<td>전화번호</td>
-			<td><input type="text" name="phone" value="<%=vo.getPhone()%>" /></td>
+			<td><input type="text" name="phone" value="${vo.phone}" /></td>
 		</tr>
-		<%} else{%>
-		
+</c:if>
+<%-- 	<c:if test="${vo==null}">	
 		<tr>
 			<td>일치하는 회원이 없습니다.</td>
 		</tr>
-		
-		<%} %>
+	</c:if
+> --%>
 		
 		<tr>
 			<td colspan="2" align="center">

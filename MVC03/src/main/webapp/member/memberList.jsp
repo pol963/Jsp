@@ -3,13 +3,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	ArrayList<MemberVO> list = (ArrayList<MemberVO>)request.getAttribute("list");	
+	//ArrayList<MemberVO> list = (ArrayList<MemberVO>)request.getAttribute("list");	
 		
-
-
 %>    
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!-- jsp만 가지고 MVC웹페이지 구현해보기. controller미사용. -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +28,7 @@
 
 </head>
 <body>
-MVC03 예제 Controller와 View 연동
+MVC03 예제 Controller와 View(JSTL+EL) 연동
 	<table class="table table-bordered">
 		<tr>
 			<td>번호</td>	
@@ -42,27 +40,21 @@ MVC03 예제 Controller와 View 연동
 			<td>전화번호</td>
 			<td>삭제</td>
 		</tr>
-<%
-	for(MemberVO vo : list){
-%>
-	<tr>
-		<td><%=vo.getNum()%></td>	
-		<td><a href="memberContent.do?num=<%=vo.getNum()%>"><%=vo.getId()%></a></td>
-		<td><%=vo.getPass()%></td>
-		<td><%=vo.getName()%></td>
-		<td><%=vo.getAge()%></td>
-		<td><%=vo.getEmail()%></td>
-		<td><%=vo.getPhone()%></td>
-		<td>
-			<input type="button" value="삭제" class="btn btn-warning" 
-			onclick="deleteFn(<%=vo.getNum()%>)" />
-		</td>
-	</tr>
-	
-<%	
-	}
 
-%>	
+	<c:forEach var="vo" items="${list}">
+      <tr>
+        <td>${vo.num}</td>
+        <td><a href="memberContent.do?num=${vo.num}">${vo.id}</a></td>
+        <td>${vo.pass}</td>
+        <td>${vo.name}</td>
+        <td>${vo.age}</td>
+        <td>${vo.email}</td>
+        <td>${vo.phone}</td>
+        <td><input type="button" value="삭제" class="btn btn-warning"
+                                                  onclick="deleteFn(${vo.num})"></td>
+      </tr>  
+  </c:forEach>
+
 
 	<tr>
 		<td colspan="8" align="center"><input type="button" value="회원가입" class="btn btn-primary" 
