@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.bit.controller.Controller;
+import kr.bit.controller.MemberListController;
 import kr.bit.model.MemberDAO;
 import kr.bit.model.MemberVO;
 
@@ -40,13 +42,18 @@ public class MemberFrontController extends HttpServlet {
 		String command = url.substring(ctx.length()); //뒤 파라미터 생략시 끝까지.
 		System.out.println(command);
 		
+		Controller controller=null;
+		String nextPage=null;
+		
 		//요청(command)에 따른 분기 작업.
 		if(command.equals("/memberList.do")) {//회원리스트 보기
-			MemberDAO dao = new MemberDAO();
-			List<MemberVO> list = dao.memberList();
-			request.setAttribute("list", list);
-			RequestDispatcher rd = request.getRequestDispatcher("member/memberList.jsp");
+			
+			controller = new MemberListController();
+			nextPage = controller.requestHandler(request, response);
+			
+			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
 			rd.forward(request, response);
+			
 		}else if(command.equals("/memberInsert.do")){//회원가입
 			
 			String id = request.getParameter("id");
