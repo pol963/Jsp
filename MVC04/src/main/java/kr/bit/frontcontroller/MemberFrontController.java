@@ -56,29 +56,7 @@ public class MemberFrontController extends HttpServlet {
 			
 		}else if(command.equals("/memberInsert.do")){//회원가입
 			
-			String id = request.getParameter("id");
-			String pass = request.getParameter("pass");
-			String name = request.getParameter("name");
-			int age = Integer.parseInt(request.getParameter("age"));
-			String email = request.getParameter("email");
-			String phone = request.getParameter("phone");
 			
-			MemberVO vo = new MemberVO();
-			vo.setId(id);
-			vo.setPass(pass);
-			vo.setName(name);
-			vo.setAge(age);
-			vo.setEmail(email);
-			vo.setPhone(phone);
-			
-			MemberDAO dao = new MemberDAO();
-			int cnt =dao.memberInsert(vo);
-			PrintWriter out = response.getWriter();
-			if(cnt > 0) {
-				response.sendRedirect("/MVC04/memberList.do");
-			}else {
-				throw new ServletException("Not insert");
-			}
 			
 			
 		}else if(command.equals("/memberRegister.do")) {//회원가입화면
