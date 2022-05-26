@@ -12,7 +12,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.bit.controller.Controller;
+import kr.bit.controller.MemberContentController;
+import kr.bit.controller.MemberDeleteController;
+import kr.bit.controller.MemberInsertController;
 import kr.bit.controller.MemberListController;
+import kr.bit.controller.MemberRegisterController;
+import kr.bit.controller.MemberUpdateController;
 import kr.bit.model.MemberDAO;
 import kr.bit.model.MemberVO;
 
@@ -56,59 +61,46 @@ public class MemberFrontController extends HttpServlet {
 			
 		}else if(command.equals("/memberInsert.do")){//회원가입
 			
+			controller = new MemberInsertController();
+			nextPage = controller.requestHandler(request, response);
 			
+			response.sendRedirect(nextPage);
 			
 			
 		}else if(command.equals("/memberRegister.do")) {//회원가입화면
-			RequestDispatcher rd = request.getRequestDispatcher("member/memberRegister.html");
+			
+			controller = new MemberRegisterController();
+			nextPage = controller.requestHandler(request, response);
+			
+			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
 			rd.forward(request, response);
 			
 		}else if(command.equals("/memberContent.do")) {
-			int num = Integer.parseInt(request.getParameter("num"));
-			MemberDAO dao = new MemberDAO();
-			MemberVO vo = dao.memberContent(num);
 			
 			
-			//객체 바인딩
-			request.setAttribute("vo", vo);
-			RequestDispatcher rd = request.getRequestDispatcher("member/memberContent.jsp");
+			controller = new MemberContentController();
+			nextPage = controller.requestHandler(request, response);
+			
+			
+			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
 			rd.forward(request, response);
 			
 		}else if(command.equals("/memberUpdate.do")) {
-			int num = Integer.parseInt(request.getParameter("num"));
-			int age = Integer.parseInt(request.getParameter("age"));
-			String email = request.getParameter("email");
-			String phone = request.getParameter("phone");
 			
-			//묶기
-			MemberVO vo = new MemberVO();
-			vo.setNum(num);
-			vo.setAge(age);
-			vo.setEmail(email);
-			vo.setPhone(phone);
+			controller = new MemberUpdateController();
+			nextPage = controller.requestHandler(request, response);
 			
-			//DAO에서 메서드 호출.
-			MemberDAO dao = new MemberDAO();
-			int cnt = dao.memberUpdate(vo); //업데이트.
-			if (cnt > 0) {
-				// 가입성공
-				response.sendRedirect("/MVC04/memberList.do");
-			} else {
-				// 가입실패-> 예외객체를 만들어서 WAS에게 던지자.
-				throw new ServletException("not update");
-			}
+			response.sendRedirect(nextPage);
+			
 			
 		}else if(command.equals("/memberDelete.do")) {
-			int num = Integer.parseInt(request.getParameter("num"));
-			 
-			 MemberDAO dao = new MemberDAO();
-			 int cnt =dao.memberDelete(num);
 			
-			 if(cnt > 0) { //cnt가0보다 크단것은 삭제에 성공했다는 것 입니다.
-				 response.sendRedirect("/MVC04/memberList.do");
-			 }else {
-				 throw new ServletException("Fail Delete");
-			 }
+			controller = new MemberDeleteController();
+			nextPage = controller.requestHandler(request, response);
+			
+			response.sendRedirect(nextPage);
+			
+			
 			
 		}//if
 		
