@@ -28,7 +28,7 @@
 
 </head>
 <body>
-MVC03 예제 Controller와 View(JSTL+EL) 연동
+MVC04 예제 FrontController+POJO 의 형식.
 	<table class="table table-bordered">
 		<tr>
 			<td>번호</td>	
