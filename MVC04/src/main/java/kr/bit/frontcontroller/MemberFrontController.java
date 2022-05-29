@@ -27,7 +27,7 @@ public class MemberFrontController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		//한글 깨짐 방지.
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("utf-8");
 		
 		
 		//FrontController의 역할.
@@ -50,59 +50,26 @@ public class MemberFrontController extends HttpServlet {
 		Controller controller=null;
 		String nextPage=null;
 		
-		//요청(command)에 따른 분기 작업.
-		if(command.equals("/memberList.do")) {//회원리스트 보기
+		//핸들러 매핑.
+		HandlerMapping mapping = new HandlerMapping();
+		controller=mapping.getController(command); 	
+		nextPage = controller.requestHandler(request, response);
+		
+		
+		//Forward와 Ridiract 별도 처리.-> 중복코드 줄이기.
+		if(nextPage != null) {
+			if(nextPage.indexOf("redirect:")!=-1) { //-1이라면데이터가없음을 의미 -1이 아니라면 데이터가 있을음 의미.
+				response.sendRedirect(nextPage.split(":")[1]); //.split메서드를 이용 :을 기준으로 짤라서 데이터를 넘겨주기.
+			}else {
+				//경로중 디렉토리가 바뀌면 모든 코드를 바꿀필요없이 아래 코드의 경로만 바꾸면 해결.
+				RequestDispatcher rd = request.getRequestDispatcher(ViewResolver.makeView(nextPage));
+				rd.forward(request, response);
+				
+				
+			}
 			
-			controller = new MemberListController();
-			nextPage = controller.requestHandler(request, response);
-			
-			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
-			rd.forward(request, response);
-			
-		}else if(command.equals("/memberInsert.do")){//회원가입
-			
-			controller = new MemberInsertController();
-			nextPage = controller.requestHandler(request, response);
-			
-			response.sendRedirect(nextPage);
-			
-			
-		}else if(command.equals("/memberRegister.do")) {//회원가입화면
-			
-			controller = new MemberRegisterController();
-			nextPage = controller.requestHandler(request, response);
-			
-			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
-			rd.forward(request, response);
-			
-		}else if(command.equals("/memberContent.do")) {
-			
-			
-			controller = new MemberContentController();
-			nextPage = controller.requestHandler(request, response);
-			
-			
-			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
-			rd.forward(request, response);
-			
-		}else if(command.equals("/memberUpdate.do")) {
-			
-			controller = new MemberUpdateController();
-			nextPage = controller.requestHandler(request, response);
-			
-			response.sendRedirect(nextPage);
-			
-			
-		}else if(command.equals("/memberDelete.do")) {
-			
-			controller = new MemberDeleteController();
-			nextPage = controller.requestHandler(request, response);
-			
-			response.sendRedirect(nextPage);
-			
-			
-			
-		}//if
+		}
+		
 		
 	}
 

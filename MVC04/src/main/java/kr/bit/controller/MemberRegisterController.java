@@ -14,7 +14,7 @@ public class MemberRegisterController implements Controller{
 
 		
 			
-		return "/WEB-INF/member/memberRegister.html";
+		return "memberRegister";
 	}
 
 }

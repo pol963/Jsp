@@ -35,7 +35,7 @@ public class MemberUpdateController implements Controller{
 		
 		if (cnt > 0) {
 			// 수정성공
-			nextPage="/MVC04/memberList.do";
+			nextPage="redirect:/MVC04/memberList.do";
 		} else {
 			// 수정실패-> 예외객체를 만들어서 WAS에게 던지자.
 			throw new ServletException("not update");

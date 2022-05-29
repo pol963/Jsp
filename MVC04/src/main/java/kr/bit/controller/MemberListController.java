@@ -26,7 +26,7 @@ public class MemberListController implements Controller{
 		request.setAttribute("list", list);
 		
 		// 3. 다음 페이지 정보.
-		return "/WEB-INF/member/memberList.jsp";
+		return "memberList";
 		
 	}
 

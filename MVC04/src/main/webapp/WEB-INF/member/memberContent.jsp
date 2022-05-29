@@ -20,7 +20,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<form action="memberUpdate.do" method="post">
+	<form action="/MVC04/memberUpdate.do" method="post">
 	<input type="hidden" name="num" value="${vo.num}"/>
 	<table class="table table-bordered">
 <c:if test="${vo!=null}">

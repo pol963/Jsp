@@ -19,8 +19,9 @@ public class MemberDeleteController implements Controller{
 		 MemberDAO dao = new MemberDAO();
 		 int cnt =dao.memberDelete(num);
 		String nextPage = null;
-		 if(cnt > 0) { //cnt가0보다 크단것은 삭제에 성공했다는 것 입니다.
-			 nextPage="/MVC04/memberList.do";
+		 if(cnt > 0) { //cnt가0보다 크단것은 삭제에 성공했다는 것 입니다. 
+			 //경로앞의 redirect라는 키워드를 붙여줄 수있습니다.
+			 nextPage="redirect:/MVC04/memberList.do";
 		 }else {
 			 throw new ServletException("Fail Delete");
 		 }	
