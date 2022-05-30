@@ -16,6 +16,8 @@ public class MemberInsertController implements Controller{
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		String ctx = request.getContextPath();
+		
 		String id = request.getParameter("id");
 		String pass = request.getParameter("pass");
 		String name = request.getParameter("name");
@@ -37,7 +39,7 @@ public class MemberInsertController implements Controller{
 		String nextPage = null;
 		
 		if(cnt > 0) {
-			nextPage = "redirect:/MVC04/memberList.do";
+			nextPage = "redirect:"+ctx+"/memberList.do";
 		}else {
 			throw new ServletException("Not insert");
 		}

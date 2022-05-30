@@ -14,6 +14,8 @@ public class MemberDeleteController implements Controller{
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		String ctx = request.getContextPath();
+		
 		int num = Integer.parseInt(request.getParameter("num"));
 		 
 		 MemberDAO dao = new MemberDAO();
@@ -21,7 +23,7 @@ public class MemberDeleteController implements Controller{
 		String nextPage = null;
 		 if(cnt > 0) { //cnt가0보다 크단것은 삭제에 성공했다는 것 입니다. 
 			 //경로앞의 redirect라는 키워드를 붙여줄 수있습니다.
-			 nextPage="redirect:/MVC04/memberList.do";
+			 nextPage="redirect:"+ctx+"/memberList.do";
 		 }else {
 			 throw new ServletException("Fail Delete");
 		 }	
