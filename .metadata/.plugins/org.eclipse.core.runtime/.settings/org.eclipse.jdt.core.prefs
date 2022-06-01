@@ -1,7 +1,10 @@
 eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=C\:/eGovFrame-4.0.0/bin/eclipse/
 org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/eGovFrame-4.0.0/bin/jdk8u242-b08/jre/lib/rt.jar
 org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/eGovFrame-4.0.0/bin/jdk8u242-b08/src.zip
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/eGovFrame-4.0.0/bin/eclipse/plugins/org.junit_4.13.0.v20200204-1500.jar
+org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/eGovFrame-4.0.0/maven/repository
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
