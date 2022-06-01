@@ -5,7 +5,24 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-05-31T19:00:00Z</updated>
+  <updated>2022-06-01T15:00:00Z</updated>
+  <entry>
+    <title>Spring Security OAuth reaches End-of-Life</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/06/01/spring-security-oauth-reaches-end-of-life" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Joe Grandja</name>
+    </author>
+    <id>tag:spring.io,2022-06-01:4816</id>
+    <updated>2022-06-01T15:00:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;a href="https://spring.io/projects/spring-security-oauth"&gt;Spring Security OAuth&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-security-oauth2-boot"&gt;Spring Security OAuth Boot 2 auto-configuration&lt;/a&gt; projects have reached end of life.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The Spring Security OAuth project has been replaced by the Client and Resource Server support provided by &lt;a href="https://docs.spring.io/spring-security/reference/servlet/oauth2/index.html"&gt;Spring Security&lt;/a&gt; and the Authorization Server support provided by &lt;a href="https://spring.io/projects/spring-authorization-server"&gt;Spring Authorization Server&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - May 31st, 2022</title>
     <link rel="alternate" href="https://spring.io/blog/2022/05/31/this-week-in-spring-may-31st-2022" />
@@ -918,23 +935,6 @@ Details of commercial support can be found at &lt;a href="https://tanzu.vmware.c
 &lt;p&gt;I would like to thank all contributors who had a role in this milestone release! As we continue our work on Spring Batch 5, we look forward to your feedback on &lt;a href="https://github.com/spring-projects/spring-batch/issues"&gt;Github&lt;/a&gt;, &lt;a href="https://twitter.com/springbatch"&gt;Twitter&lt;/a&gt;, and &lt;a href=""&gt;StackOverflow&lt;/a&gt;.&lt;/p&gt;
 &lt;hr/&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-batch"&gt;Spring Batch Home&lt;/a&gt;|&lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on Github&lt;/a&gt;|&lt;a href="https://docs.spring.io/spring-batch/docs/5.0.0-M2/reference/html/index-single.html"&gt;Reference documentation&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security 5.7.1, 5.6.5, 5.5.8 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/05/18/spring-security-5-7-1-5-6-5-5-5-8-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Marcus Hert Da Coregio</name>
-    </author>
-    <id>tag:spring.io,2022-05-18:4796</id>
-    <updated>2022-05-18T11:00:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;A new round of releases for Spring Security is available now. The new releases fix a bug where the &lt;code&gt;StrictHttpFirewall&lt;/code&gt; incorrectly rejects valid CJKV characters.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Please take a look at the &lt;a href="https://github.com/spring-projects/spring-security/releases"&gt;release notes&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
