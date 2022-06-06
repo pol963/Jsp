@@ -154,7 +154,8 @@
 	<!-- path -> url에 지정한 경로(/web)가 넘거왓을때 // docBase -> web안의 경로중 webapp디렉토리로 찾아가기.  -->
 	<Context docBase="C:\eGovFrame-4.0.0\workspace.edu\WEB\webapp" path="/web"/>
 		
-      <Context docBase="MVC04" path="/MVC04" reloadable="true" source="org.eclipse.jst.jee.server:MVC04"/></Host>
+      <Context docBase="MVC04" path="/MVC04" reloadable="true" source="org.eclipse.jst.jee.server:MVC04"/>
+      <Context docBase="TrainingMVC01" path="/TrainingMVC01" reloadable="true" source="org.eclipse.jst.jee.server:TrainingMVC01"/></Host>
     </Engine>
   </Service>
 </Server>
