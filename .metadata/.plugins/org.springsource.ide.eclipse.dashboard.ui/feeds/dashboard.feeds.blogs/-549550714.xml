@@ -5,7 +5,39 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-06-02T21:00:00Z</updated>
+  <updated>2022-06-07T12:00:00Z</updated>
+  <entry>
+    <title>This Week in Spring - June 7th, 2022</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/06/07/this-week-in-spring-june-7th-2022" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-06-07:4820</id>
+    <updated>2022-06-07T12:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I&amp;rsquo;ve just landed in tantalizing Toronto, Canada, for the SpringOne Tour Toronto show. I&amp;rsquo;m so excited to be here, at long last, after so long away from one of my favorite countries. I&amp;rsquo;ll be doing two talks - my usual, &lt;em&gt;Kubernetes Native Java&lt;/em&gt;, and a talk on building Kubernetes Controllers (a.k.a. &amp;ldquo;Operators&amp;rdquo;) using the official Kubernetes Java client, Spring Boot, and Spring Native with my amazing friend and teammate &lt;a href="@tiffanyfayj"&gt;Tiffany Jernigan&lt;/a&gt;, who you may recall was &lt;a href="https://bootifulpodcast.fm/#/episodes/28280dc4-c9ca-4229-8075-b4f63a4cb6c4"&gt;on the podcast not too long ago&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;After Toronto, I&amp;rsquo;m off to beautiful Berlin, Germany, for the &lt;a href="https://www.wearedevelopers.com/"&gt;We Are Developers show&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re at either show, don&amp;rsquo;t hesitate to say hi! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/06/02/spring-tips-learn-spring-for-graphql-parts-1-and-2-of-an-ongoing-series"&gt;Spring Tips: Learn Spring for GraphQL (parts 1 and 2 of an ongoing series)&lt;/a&gt; Hi Spring fans! I&amp;rsquo;ve put together a series of videos introducing all things Spring for GraphQL. The first two installments (of nine, I suspect) are available for your viewing pleasure on &lt;a href="https://bit.ly/spring-tips-playlist"&gt;YouTube&lt;/a&gt; as part of my usual &lt;a href="https://twitter.com/SpringTipsLive"&gt;@SpringTipsLive&lt;/a&gt; series.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/06/02/a-bootiful-podcast-spring-i-o-founder-spring-trainer-and-community-legend-sergi-almar"&gt;A Bootiful Podcast: Spring I/O founder, Spring trainer, and community legend Sergi Almar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I did a version of the talk on Kubernetes controllers with my amazing teammate Cora Iberkleid at Spring IO a few weeks ago. Check it out: &lt;a href="https://www.youtube.com/watch?v=5IROOj7sLKg"&gt;Bootiful Kubernetes Operators by Cora Iberkleid and Josh Long @ Spring I/O 2022 - YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698432138/0/baeldung~Expose-GraphQL-Field-with-Different-Name"&gt;Expose GraphQL Field with Different Name&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698617368/0/baeldung~Configure-JWT-Authentication-for-OpenAPI"&gt;Configure JWT Authentication for OpenAPI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698346088/0/baeldung~Difference-Between-Expose-and-Ports-in-Docker-Compose"&gt;Difference Between Expose and Ports in Docker Compose&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698679718/0/baeldung~Disabling-Keycloak-Security-in-Spring-Boot"&gt;Disabling Keycloak Security in Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698374228/0/baeldung~Docker-Compose-Restart-Policies"&gt;Docker Compose Restart Policies&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698163668/0/baeldung~Docker-Registry-API-Listing-Images-and-Tags"&gt;Docker Registry API – Listing Images and Tags&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698519006/0/baeldung~How-to-Mock-HttpServletRequest"&gt;How to Mock HttpServletRequest&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.springcloud.io/post/2022-06/jdbctemplate-id/#gsc.tab=0"&gt;How to get the auto-incremented ID when using JdbcTemplate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://medium.com/@ankithahjpgowda/log-request-and-responses-of-rest-apis-in-springboot-c13f9bc7903f"&gt;Log request and responses of REST APIs in SpringBoot, by Ankitha Gowda &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/06/02/spring-cloud-stream-applications-2021-1-2-ga-release-now-available"&gt;Spring Cloud Stream Applications 2021.1.2 GA Release now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Want a taste of the main themes from the Spring team this year? And, in a small way, a preview of what will be coming at SpringOne 2022? Check out this year&amp;rsquo;s &lt;a href="https://www.youtube.com/watch?v=3xjjXq4EEx4&amp;t=4090s"&gt;Spring I/O 2022 Welcome and Keynote on YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698449908/0/baeldung~Tomcat-Warning-To-Prevent-a-Memory-Leak-the-JDBC-Driver-Has-Been-Forcibly-Unregistered"&gt;Tomcat Warning “To Prevent a Memory Leak, the JDBC Driver Has Been Forcibly Unregistered”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://springbootlearning.medium.com/writing-tests-is-never-a-mistake-78d7054f56ba"&gt;Writing tests is NEVER a mistake…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Spring I/O founder, Spring trainer and community legend Sergi Almar</title>
     <link rel="alternate" href="https://spring.io/blog/2022/06/02/a-bootiful-podcast-spring-i-o-founder-spring-trainer-and-community-legend-sergi-almar" />
@@ -875,22 +907,6 @@ Details of commercial support can be found at &lt;a href="https://tanzu.vmware.c
 &lt;/ul&gt;
 &lt;p&gt;Looking forward to next week when &lt;a href="https://2022.springio.net/"&gt;Spring I/O&lt;/a&gt;, a unique conference with a strong focus on community and technical content, resumes after a 2 year hiatus. It gives us the first opportunity to present this project after its GA release and have direct interactions. GraphQL coverage features in the keynote and in a dedicated session.&lt;/p&gt;
 &lt;p&gt;As always, if you&amp;rsquo;ve taken the time to report an issue, provide feedback, test, or participate in discussions, contributing thoughts and ideas, thank you! Every little bit helps to make an open-source project stronger.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.5.14 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/05/19/spring-boot-2-5-14-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2022-05-19:4798</id>
-    <updated>2022-05-19T09:21:10Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;2.5.14&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.5.14"&gt;29 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#end-of-oss-support" class="anchor" name="end-of-oss-support"&gt;&lt;/a&gt;End of OSS Support&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;2.5.x&lt;/code&gt; has now reached the end of its OSS support period and regular releases will no longer be made. If you are still on this version, please consider upgrading at your earliest convenience. If you cannot upgrade at this time, &lt;a href="https://tanzu.vmware.com/spring-runtime"&gt;commercial support is available&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.5.14/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
