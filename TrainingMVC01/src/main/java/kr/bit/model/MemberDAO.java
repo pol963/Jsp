@@ -1,6 +1,7 @@
 package kr.bit.model;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class MemberDAO {
 
@@ -26,6 +27,7 @@ public class MemberDAO {
 	}
 	
 	//회원 가입 -> 회원저장.
+	
 	public int memberInsert(MemberVO vo) {
 		String SQL = "insert into member(id,pass,name,age,email,phone) values(?,?,?,?,?,?)";
 		getConnect();
@@ -42,20 +44,75 @@ public class MemberDAO {
 			ps.setInt(4, vo.getAge());
 			ps.setString(5, vo.getEmail());
 			ps.setString(6, vo.getPhone());
-			
 			cnt=ps.executeUpdate();
-			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-			
+		}finally {
+			dbClose();
 		}
-		
 		return cnt;
+		
+	}
+	
+	
+	public ArrayList<MemberVO> memberList() {
+		String SQL = "select * from member";
+		getConnect();
+		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+		try {
+			ps=conn.prepareStatement(SQL);
+			rs = ps.executeQuery();	
+			while(rs.next()) {
+				int num = rs.getInt("num");
+				String id = rs.getString("id");
+				String pass = rs.getString("pass");
+				String name = rs.getString("name");
+				int age = rs.getInt("age");
+				String email = rs.getString("email");
+				String phone = rs.getString("phone");
+				
+				MemberVO vo = new MemberVO(num, id, pass, name, age, email, phone);
+				list.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		return list;
+	}
+	
+	
+	
+	public void dbClose() {
+		try {
+			if(rs!=null) rs.close();
+			if(ps!=null) ps.close();
+			if(conn!=null)conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 	
 	
 	
 	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,7 +5,30 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-06-09T15:00:00Z</updated>
+  <updated>2022-06-10T16:00:00Z</updated>
+  <entry>
+    <title>Spring Tips: Learn Spring for GraphQL (parts 3 and 4 of an ongoing series)</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/06/10/spring-tips-learn-spring-for-graphql-parts-3-and-4-of-an-ongoing-series" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-06-10:4823</id>
+    <updated>2022-06-10T16:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In thi^^^ these installments, we continue our series introducing the Spring for GraphQL project. This series features Spring for GraphQL lead &lt;a href="https://twitter.com/rstoya05"&gt;Rossen Stoyanchev (@rstoya05)&lt;/a&gt; - whose work you may know from basically everything in the wide and wonderful world of Springdom having to do with the web (HTTP, RSocket, WebSockets, GraphQL, JSF, MVC, etc) - and GraphQL Java engine founder and lead &lt;a href="https://twitter.com/andimarek"&gt;Andi Marek (@andimarek)&lt;/a&gt; and of course yours truly, Spring Developer Advocate &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt;. It provides an in-depth look at all things Spring for GraphQL.&lt;/p&gt;
+&lt;p&gt;This week I&amp;rsquo;m publishing two new installments. &lt;/p&gt;
+&lt;p&gt;In this week&amp;rsquo;s first installment, episode three of a series, looks at batching requests with Spring for GraphQL&amp;rsquo;s &lt;code&gt;@BatchMapping&lt;/code&gt; support. This mechanism in turn builds on Facebook&amp;rsquo;s DataLoader facility. &lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/a1vZcSaicmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Then, in this week&amp;rsquo;s second installment, episode four of a series, we look at how to make a change with mutations. This is one of my favorite parts about GraphQL - it&amp;rsquo;s plain, pragmatic, and - most importantly - obvious! &lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/QJAkvhG7cos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;This continues the series we started last week, with episodes one and two, which I recap here: &lt;/p&gt;
+&lt;p&gt;In this first installment, we look at the basics of using the GraphQL Java engine that underpins Spring for GraphQL. &lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/gvIqFDNGgwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;In this second installment, we look at using the Spring for GraphQL component model by writing queries. &lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/zltMcbnAxyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;I know it&amp;rsquo;s been more than a month since we last published a video, so I&amp;rsquo;m going to be releasing every episode of this series very quickly, over the next week or two. I&amp;rsquo;ve already recorded and mostly finished producing eight episodes. I&amp;rsquo;m working on producing a ninth, and that&amp;rsquo;ll be that! A complete introduction to all things Spring for GraphQL. These are of course part of the usual &lt;a href="https://www.youtube.com/watch?v=zltMcbnAxyA&amp;list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc"&gt;&lt;code&gt;Spring Tips&lt;/code&gt;&lt;/a&gt; playlist on YouTube, but also part of the &lt;a href="https://www.youtube.com/watch?v=gvIqFDNGgwU&amp;list=PLgGXSWYM2FpNRPDQnAGfAHxMl3zUG2Run"&gt;&lt;code&gt;Learn Spring for GraphQL with Josh Long&lt;/code&gt;&lt;/a&gt; playlist. Follow that one to be notified of any new episodes! &lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Kubernetes legend and friend Cora Iberkleid on Tanzu, Cartographer, and more</title>
     <link rel="alternate" href="https://spring.io/blog/2022/06/09/a-bootiful-podcast-kubernetes-legend-and-friend-cora-iberkleid-on-tanzu-cartographer-and-more" />
@@ -872,19 +895,6 @@ Details of commercial support can be found at &lt;a href="https://tanzu.vmware.c
 &lt;p&gt;We want to take this opportunity to again thank all our users and contributors.&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask at &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;on Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.7.0/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Devoxx UK organizer and VoxxedDays cofounder Mark Hazell on running great conferences</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/05/19/a-bootiful-podcast-devoxx-uk-organizer-and-voxxeddays-cofounder-mark-hazell-on-running-great-conferences" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-05-19:4803</id>
-    <updated>2022-05-19T12:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Devoxx UK organizer and Voxxed Days cofounder &lt;a href="https://twitter.com/mrhazell"&gt;Mark Hazell (@mrhazell)&lt;/a&gt;.&lt;/p&gt;
-&lt;iframe title="Devoxx UK organizer and VoxxedDays cofounder Mark Hazel on running great conferences " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=6he9e-122da12-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
