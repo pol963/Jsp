@@ -84,6 +84,27 @@ public class MemberDAO {
 	}
 	
 	
+	public int memberDelete(int num) {
+		
+		
+		String SQL = "delete from member where num=?";
+		getConnect();
+		int cnt = -1;
+		try {
+			ps=conn.prepareStatement(SQL);
+			ps.setInt(1, num);
+			cnt = ps.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		
+		return cnt;
+	}
+	
+	
 	
 	public void dbClose() {
 		try {

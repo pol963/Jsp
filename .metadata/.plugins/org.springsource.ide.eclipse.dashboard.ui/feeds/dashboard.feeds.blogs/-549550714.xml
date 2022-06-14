@@ -5,7 +5,66 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-06-10T16:00:00Z</updated>
+  <updated>2022-06-14T07:00:00Z</updated>
+  <entry>
+    <title>Goodbye Spring IDE - Welcome Spring Tools 4</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/06/14/goodbye-spring-ide-welcome-spring-tools-4" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Martin Lippert</name>
+    </author>
+    <id>tag:spring.io,2022-06-14:4825</id>
+    <updated>2022-06-14T07:00:00Z</updated>
+    <content type="html">&lt;p&gt;On August 31 of 2004, only a few months after version 1.0 of the Spring Framework itself got released, Torsten Jürgeleit created a repository and made the initial commits to a project that became the tooling support for Spring in Eclipse, the Spring IDE project (while the roots of that work are probably going back further in time, as the comment of the first commit to the repository reads like there was a CVS repository even before that time.). Shortly after, Christian Dupuis joined, led the project for many years and initiated the Spring Tool Suite on top of Spring IDE.&lt;/p&gt;
+&lt;p&gt;It’s been a long time since then.&lt;/p&gt;
+&lt;p&gt;On December 4 of 2017, a new chapter for the Spring tooling began with the introduction of the all-new &lt;a href="https://spring.io/tools"&gt;Spring Tools 4&lt;/a&gt; and its &lt;a href="https://spring.io/blog/2017/12/04/spring-tools-4-public-beta-released"&gt;first public beta release&lt;/a&gt;, followed by the &lt;a href="https://spring.io/blog/2018/09/25/spring-tools-4-ga-released"&gt;first GA release&lt;/a&gt; made publicly available on September 25, 2018.&lt;/p&gt;
+&lt;p&gt;Since the first beta announcement of Spring Tools 4 in 2017, we continued to ship update and maintenance releases of the Spring Tool Suite 3 and the Spring IDE projects for the convenience of existing users on a regular basis, giving our existing users plenty of time to upgrade their coding environments to Spring Tools 4.&lt;/p&gt;
+&lt;p&gt;Today, this maintenance and update phase of Spring Tool Suite 3 and related Spring IDE projects come to an end. The version 3.9.22 of the Spring Tool Suite 3 and Spring IDE - that we shipped on April 28, 2022 and is compatible with the Eclipse 2022-03 release - will be the last and final release that we ship. We will no longer provide maintenance updates and we will not provide updates to make Spring IDE components compatible with Eclipse 2022-06 or other versions to come.&lt;/p&gt;
+&lt;p&gt;During all the years, we always followed the same goals and principles for the tooling: Make you as a developer using Spring more productive. We will continue that journey.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://spring.io/tools"&gt;Spring Tools 4&lt;/a&gt; are based on a whole new tooling architecture and created a solid new foundation for many years to come for the Spring tooling. As of today, the Spring Tools 4 is the top 1 downloaded extension for Eclipse on the Eclipse Marketplace and has about 1.5 Million installs on the Visual Studio Code marketplace alone.&lt;/p&gt;
+&lt;p&gt;If you haven’t yet upgraded your coding environment to Spring Tools 4 - either on Eclipse, Visual Studio Code, GitHub Codespaces, Gitpod, Eclipse Theia, or other compatible development environments, now is the time to join us for Spring Tools 4. The &lt;a href="https://github.com/spring-projects/sts4/wiki"&gt;Spring Tools 4 user guide&lt;/a&gt; contains useful information and assistance for that step.&lt;/p&gt;
+&lt;p&gt;If you would like to share your feedback, have questions around this transition to Spring Tools 4, or want to ask the tools team other questions with regards to this announcement, please comment on &lt;a href="https://github.com/spring-projects/sts4/issues/785"&gt;this issue on GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The next release of Spring Tools 4 is right around the corner, our stable release cycle ships updates around every 6 weeks, and we will continue to drive innovation in this space with future releases. A number of cool new things are in the works, and will arrive with one of our upcoming releases of Spring Tools 4. Stay tuned.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - June 14th, 2022</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/06/14/this-week-in-spring-june-14th-2022" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-06-14:4824</id>
+    <updated>2022-06-14T07:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I&amp;rsquo;ve just arrived in beautiful Berlin, Germany, for the forthcoming &lt;a href="https://www.wearedevelopers.com/world-congress"&gt;We Are Developers&lt;/a&gt; show with more than five thousand attendees. I was in Toronto, Canada, for the epic SpringOne Tour installment there. I&amp;rsquo;ve also had the privilege of taking these last two trips with my daughter, Kimly. She&amp;rsquo;s on summer break from school. It&amp;rsquo;s made the long miserable hours in economy bearable, and something for which I couldn&amp;rsquo;t be more grateful. I&amp;rsquo;m also looking forward to being at the upcoming SpringOne Tour installment in New York City, later this month. Don&amp;rsquo;t miss it! &lt;/p&gt;
+&lt;p&gt;In the meantime, we&amp;rsquo;ve got a ton of good stuff to get to this week so let&amp;rsquo;s dive right in! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Java architect Brian Goetz foreshadows an interesting new feature in Java: &lt;a href="https://mail.openjdk.java.net/pipermail/amber-spec-experts/2022-June/003461.html"&gt;&amp;ldquo;With&amp;rdquo; for records&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;In last week&amp;rsquo;s installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt;, &lt;a href="https://spring.io/blog/2022/06/09/a-bootiful-podcast-kubernetes-legend-and-friend-cora-iberkleid-on-tanzu-cartographer-and-more"&gt;I talked Kubernetes legend and friend Cora Iberkleid on Tanzu, Cartographer, and more&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/bibryam/status/1534568417394626560?s=12&amp;t=FoRDKtDKHmKU2f_6fmKoPQ"&gt;The NSA published a guide to hardening Kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698877536/0/baeldung~Check-if-at-Least-Two-Out-of-Three-Booleans-Are-True-in-Java"&gt;Check if at Least Two Out of Three Booleans Are True in Java&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/fr/articles/native-java-spring-boot/"&gt;Devenez Natif Avec Spring Boot Et GraalVM&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698679718/0/baeldung~Disabling-Keycloak-Security-in-Spring-Boot"&gt;Disabling Keycloak Security in Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://medium.com/@onyalioscar/implementing-2-way-ssl-and-acl-authentication-for-kafka-with-spring-boot-client-configuration-90221cda046b"&gt;Implementing 2-way SSL and ACL authentication for Kafka with Spring boot client configuration&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698749166/0/baeldung~Introduction-to-Lightrun-with-Java"&gt;Introduction to Lightrun with Java&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I loved this blog looking at the growth of the JobRunr project: &lt;a href="https://www.jobrunr.io/en/blog/2022-06-10-my-own-product-part-2/"&gt;Launching a developer product (JobRunr.io) - part 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/news/2022/06/spring-boot-2-7/"&gt;Spring Boot 2.7 Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://lightrun.com/tutorials/spring-boot-performance-workshop-with-vlad-mihalcea/"&gt;Spring Boot Performance Workshop with Vlad Mihalcea - Lightrun&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/06/09/spring-shell-2-1-0-m5-is-now-available"&gt;Spring Shell 2.1.0-M5 is now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/06/10/spring-tips-learn-spring-for-graphql-parts-3-and-4-of-an-ongoing-series"&gt;Spring Tips: Learn Spring for GraphQL (parts 3 and 4 of an ongoing series)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out this ticket cataloging the progress for &lt;a href="https://github.com/spring-projects/spring-boot/issues/31337"&gt; declarative HTTP clients coming in Spring Framework 6 as supported in Spring Boot &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.guardsquare.com/blog/the-proguard-story-20-years-of-innovation-in-java-optimization-guardsquare?hss_channel=tw-2906580051"&gt;The ProGuard Story: 20 Years of Innovation in Java Optimization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698880072/0/baeldung~Unit-Test-Private-Methods-in-Java"&gt;Unit Test Private Methods in Java&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1534211081094275072"&gt;New service name: Azure Spring Cloud is now Azure Spring Apps &amp;ndash; a fully-featured platform for all types of Spring apps.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/vmware-wasmstack/wasm-languages/tree/main/kotlin/browser-hello-world"&gt;wasm-languages/kotlin/browser-hello-world at main · vmware-wasmstack/wasm-languages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/sdeleuze/status/1536288226138284032?s=21&amp;t=7tmiQFHmZ2aCWZOPCTnHzw"&gt;we have an early prototype of compiling Java to WebAssembly thanks to VMware Tanzu, the Spring team’s Dr. Syer, and Google&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/news/2022/06/aws-adr-guide/?itm_source=infoq&amp;itm_medium=popular_widget&amp;itm_campaign=popular_content_list&amp;itm_content="&gt;AWS Publishes Guide to Architecture Decision Records&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/699032356/0/baeldung~Listing-Docker-Volumes"&gt;Listing Docker Volumes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/698746634/0/baeldung~Running-Cron-Jobs-in-Kubernetes"&gt;Running Cron Jobs in Kubernetes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I liked this &lt;a href="https://feeds.feedblitz.com/~/699047028/0/baeldung~A-Guide-to-Maven-Encoding"&gt;guide to Maven Encoding&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Tips: Learn Spring for GraphQL (parts 3 and 4 of an ongoing series)</title>
     <link rel="alternate" href="https://spring.io/blog/2022/06/10/spring-tips-learn-spring-for-graphql-parts-3-and-4-of-an-ongoing-series" />
@@ -838,63 +897,6 @@ Details of commercial support can be found at &lt;a href="https://tanzu.vmware.c
   &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/696805582/0/baeldung~Apache-ActiveMQ-vs-Kafka"&gt;Apache ActiveMQ vs. Kafka&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/697365364/0/baeldung~Check-if-a-Character-is-a-Vowel-in-Java"&gt;Check if a Character is a Vowel in Java&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 3.0.0-M3 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/05/19/spring-boot-3-0-0-m3-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Scott Frederick</name>
-    </author>
-    <id>tag:spring.io,2022-05-19:4806</id>
-    <updated>2022-05-19T20:58:26Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;3.0.0-M3&lt;/code&gt; has been released and is now available from &lt;a href="https://repo.spring.io/milestone"&gt;https://repo.spring.io/milestone&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v3.0.0-M3"&gt;74 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Notable new features include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Auto-configuration for Micrometer Observation, Tracing, and OtlpMeterRegistry&lt;/li&gt;
-  &lt;li&gt;Reinstated Support for REST Assured and Pooled JMS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0.0-M3-Release-Notes"&gt;release notes&lt;/a&gt; for more details and upgrade instructions.&lt;/p&gt;
-&lt;p&gt;Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/3.0.0-M3/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.7.0 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/05/19/spring-boot-2-7-0-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Andy Wilkinson</name>
-    </author>
-    <id>tag:spring.io,2022-05-19:4802</id>
-    <updated>2022-05-19T13:38:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the Spring Boot team and everyone that has contributed, I am pleased to announce that Spring Boot 2.7.0 has been released and is available from Maven Central. &lt;/p&gt;
-&lt;p&gt;This release adds a significant number of new features and improvements. For full &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.7-Release-Notes#upgrading-from-spring-boot-26"&gt;upgrade instructions&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.7-Release-Notes#new-and-noteworthy"&gt;new and noteworthy&lt;/a&gt; features please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.7-Release-Notes"&gt;release notes&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new-in-2-7" class="anchor" name="what-rsquo-s-new-in-2-7"&gt;&lt;/a&gt;What&amp;rsquo;s new in 2.7&lt;/h2&gt;
-&lt;p&gt;The highlights of the 2.7 release include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Auto-configuration and metrics for Spring for GraphQL; see related 1.0 &lt;a href="https://spring.io/blog/2022/05/19/spring-for-graphql-1-0-release"&gt;release announcement&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;New &lt;code&gt;@DataCouchbaseTest&lt;/code&gt; and &lt;code&gt;@DataElasticsearchTest&lt;/code&gt; support&lt;/li&gt;
-  &lt;li&gt;Podman can now be used when building images using Cloud Native Buildpacks&lt;/li&gt;
-  &lt;li&gt;Support for Cache2k&lt;/li&gt;
-  &lt;li&gt;Simplified registration of Jackson Mixins&lt;/li&gt;
-  &lt;li&gt;Web server SSL configuration using PEM-encoded certs&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#dependency-upgrades" class="anchor" name="dependency-upgrades"&gt;&lt;/a&gt;Dependency upgrades&lt;/h3&gt;
-&lt;p&gt;Spring Boot 2.7 moves to new versions of several Spring projects:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-data-commons/wiki/Release-Train-2021.2-%28Raj%29-Release-Notes"&gt;Spring Data 2021.2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-hateoas/releases/tag/1.5.0"&gt;Spring HATEOAS 1.5&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-ldap/releases/tag/2.4.0"&gt;Spring LDAP 2.4&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://docs.spring.io/spring-security/reference/5.7/whats-new.html"&gt;Spring Security 5.7&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session-bom/wiki/Spring-Session-2021.2-Release-Notes-%28preview%29"&gt;Spring Session 2021.2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We’ve also upgraded to the latest stable releases of other third-party libraries wherever possible. Please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.7-Release-Notes#dependency-upgrades"&gt;release notes&lt;/a&gt; for details.&lt;/p&gt;&lt;h3&gt;&lt;a href="#other-changes" class="anchor" name="other-changes"&gt;&lt;/a&gt;Other changes&lt;/h3&gt;
-&lt;p&gt;There&amp;rsquo;s a whole host of other changes and improvements that are documented in the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.7-Release-Notes"&gt;release notes&lt;/a&gt;. You can also find a list of deprecated classes and methods that we plan to remove in the next version.&lt;/p&gt;
-&lt;p&gt;Additionally, Spring Boot 2.5 has now reached the end of its OSS support period. More information on Spring Boot&amp;rsquo;s support dates can be found &lt;a href="https://spring.io/projects/spring-boot#support"&gt;here.&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#thank-you" class="anchor" name="thank-you"&gt;&lt;/a&gt;Thank you&lt;/h2&gt;
-&lt;p&gt;We want to take this opportunity to again thank all our users and contributors.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask at &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;on Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.7.0/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
