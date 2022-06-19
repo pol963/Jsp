@@ -2672,3 +2672,30 @@ Binding(CTRL+SHIFT+C,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-17 01:50:51.714
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-17 01:50:51.746
+!MESSAGE classpath=46 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-17 01:50:51.749
+!MESSAGE buffering callback sts4.classpath.SpLHmdjj TrainingMVC02 false 46
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-17 01:50:51.750
+!MESSAGE executing callback sts4.classpath.SpLHmdjj 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-17 01:50:52.317
+!MESSAGE executing callback sts4.classpath.SpLHmdjj SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-17 01:51:07.039
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.SpLHmdjj
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-17 01:51:07.040
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.SpLHmdjj
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-17 01:51:07.041
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-17 01:51:07.041
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.SpLHmdjj => OK
