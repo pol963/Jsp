@@ -22,7 +22,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+	<script type="text/javascript">
+		function deleteFn(num) {
+			location.href="memberDelete.jsp?num="+num; 
+		}
+	</script>
 </head>
 <body>
 	<table class="table table-bordered">
@@ -41,18 +45,26 @@
 %>
 	<tr>
 		<td><%=vo.getNum()%></td>	
-		<td><%=vo.getId() %></td>
+		<td><a href="memberContent.jsp?num=<%=vo.getNum()%>"><%=vo.getId() %></a></td>
 		<td><%=vo.getPass()%></td>
 		<td><%=vo.getName()%></td>
 		<td><%=vo.getAge()%></td>
 		<td><%=vo.getEmail()%></td>
 		<td><%=vo.getPhone()%></td>
+		<td><input type="button" value="삭제" class="btn btn-warning" 
+			onclick="deleteFn(<%=vo.getNum()%>)"
+		/></td>
 	</tr>
 	
 <%	
 	}
-
 %>	
+	<tr>
+		<td colspan="8" align="center">
+			<input type="button" value="회원가입" class="btn btn-primary"
+			 onclick="location.href='memberRegister.html'" />
+		</td>
+	</tr>
 	</table>
 </body>
 </html>
