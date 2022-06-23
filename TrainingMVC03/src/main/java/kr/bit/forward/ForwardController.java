@@ -1,6 +1,8 @@
 package kr.bit.forward;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +25,10 @@ public class ForwardController extends HttpServlet {
 		vo.setName(name);
 		vo.setAge(age);
 		vo.setEmail(email);
+		
+		request.setAttribute("vo", vo);
+		RequestDispatcher rd = request.getRequestDispatcher("view/forward.jsp");
+		rd.forward(request, response); 
 		
 		
 	}

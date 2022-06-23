@@ -9,7 +9,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="kr.bit.controller.MemberUpdateController"/>
     <fullyQualifiedTypeName name="kr.bit.controller.MemberDeleteController"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="kr.bit.controller.Controller"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="kr.bit.frontcontroller.HandlerMapping"/>
@@ -31,4 +30,5 @@
     <fullyQualifiedTypeName name="kr.bit.model.MemberDAO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="kr.bit.model.MemberVO"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>
