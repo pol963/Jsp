@@ -47,7 +47,7 @@ public class MemberInsertController extends HttpServlet {
 		if(cnt>0) {
 			//가입성공
 			//out.println("insert success");
-			response.sendRedirect("/TrainingMVC01/memberList.do");
+			response.sendRedirect("/TrainingMVC03/memberList.do");
 			
 			
 		}else {

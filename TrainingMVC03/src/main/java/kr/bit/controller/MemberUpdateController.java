@@ -36,7 +36,7 @@ public class MemberUpdateController extends HttpServlet {
 		int cnt = dao.memberUpdate(vo);
 		
 		if(cnt>0) {
-			response.sendRedirect("/TrainingMVC01/memberList.do");
+			response.sendRedirect("/TrainingMVC03/memberList.do");
 			
 			
 		}else {
