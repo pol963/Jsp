@@ -2,9 +2,10 @@
 <%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <%
 	
-	ArrayList<MemberVO> list = (ArrayList<MemberVO>)request.getAttribute("list");
+	//ArrayList<MemberVO> list = (ArrayList<MemberVO>)request.getAttribute("list");
 
 %>    
 
@@ -28,7 +29,7 @@
 
 </head>
 <body>
-TrainingMVC03 forward기법 사용.
+TrainingMVC03 forward기법 사용. (JSTL+EL)
 	<table class="table table-bordered">
 		<tr>
 			<td>번호</td>	
@@ -40,27 +41,22 @@ TrainingMVC03 forward기법 사용.
 			<td>전화번호</td>
 			<td>삭제</td>
 		</tr>
-<%
-	for(MemberVO vo : list){
-%>
+<c:forEach var="vo" items="${list}">
 	<tr>
-		<td><%=vo.getNum()%></td>	
-		<td><a href="memberContent.do?num=<%=vo.getNum()%>"><%=vo.getId()%></a></td>
-		<td><%=vo.getPass()%></td>
-		<td><%=vo.getName()%></td>
-		<td><%=vo.getAge()%></td>
-		<td><%=vo.getEmail()%></td>
-		<td><%=vo.getPhone()%></td>
+		<td>${vo.num}</td>	
+		<td><a href="memberContent.do?num=${vo.num}">${vo.id}</a></td>
+		<td>${vo.pass}</td>
+		<td>${vo.name}</td>
+		<td>${vo.age}</td>
+		<td>${vo.email}</td>
+		<td>${vo.phone}</td>
 		<td>
 			<input type="button" value="삭제" class="btn btn-warning" 
-			onclick="deleteFn(<%=vo.getNum()%>)" />
+			onclick="deleteFn(${vo.num})" />
 		</td>
 	</tr>
 	
-<%	
-	}
-
-%>	
+</c:forEach>
 
 	<tr>
 		<td colspan="8" align="center"><input type="button" value="회원가입" class="btn btn-primary" 
