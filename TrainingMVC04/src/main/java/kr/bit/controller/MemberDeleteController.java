@@ -14,13 +14,14 @@ public class MemberDeleteController implements Controller{
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		String ctx = request.getContextPath();
 		int num = Integer.parseInt(request.getParameter("num"));
 		
 		MemberDAO dao = new MemberDAO();
 		int cnt =dao.memberDelete(num);
 		String nextPage = null;
 		if(cnt>0) {
-			nextPage="redirect:/TrainingMVC04/memberList.do";
+			nextPage="redirect:"+ctx+"/memberList.do";
 		}else {
 			throw new ServletException("cant delete"); 
 		}

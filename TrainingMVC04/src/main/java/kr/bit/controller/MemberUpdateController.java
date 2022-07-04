@@ -15,6 +15,8 @@ public class MemberUpdateController implements Controller{
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		String ctx = request.getContextPath();
+		
 		int num = Integer.parseInt(request.getParameter("num"));
 		int age = Integer.parseInt(request.getParameter("age"));
 		String email = request.getParameter("email");
@@ -31,7 +33,7 @@ public class MemberUpdateController implements Controller{
 		String nextPage = null;
 		
 		if(cnt>0) {
-			nextPage="redirect:/TrainingMVC04/memberList.do";
+			nextPage="redirect:"+ctx+"/memberList.do";
 			
 			
 		}else {

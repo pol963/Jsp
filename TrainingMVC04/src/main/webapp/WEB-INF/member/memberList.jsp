@@ -2,7 +2,8 @@
 <%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>  
 <%
 	
 	//ArrayList<MemberVO> list = (ArrayList<MemberVO>)request.getAttribute("list");
@@ -21,7 +22,7 @@
 
 <script type="text/javascript">
 	function deleteFn(num) {
-		location.href="memberDelete.do?num="+num; //
+		location.href="${ctx}/memberDelete.do?num="+num; //
 	}
 
 </script>
@@ -44,7 +45,7 @@ TrainingMVC04 forward기법 사용. (JSTL+EL) + FrontController
 <c:forEach var="vo" items="${list}">
 	<tr>
 		<td>${vo.num}</td>	
-		<td><a href="memberContent.do?num=${vo.num}">${vo.id}</a></td>
+		<td><a href="${ctx}/memberContent.do?num=${vo.num}">${vo.id}</a></td>
 		<td>${vo.pass}</td>
 		<td>${vo.name}</td>
 		<td>${vo.age}</td>
@@ -60,7 +61,7 @@ TrainingMVC04 forward기법 사용. (JSTL+EL) + FrontController
 
 	<tr>
 		<td colspan="8" align="center"><input type="button" value="회원가입" class="btn btn-primary" 
-			onclick="location.href='/TrainingMVC04/memberRegister.do'"/></td>
+			onclick="location.href='${ctx}/memberRegister.do'"/></td>
 	</tr>	
 		 
 	</table>
