@@ -20,7 +20,7 @@ public class MemberDeleteController implements Controller{
 		int cnt =dao.memberDelete(num);
 		String nextPage = null;
 		if(cnt>0) {
-			nextPage="/TrainingMVC04/memberList.do";
+			nextPage="redirect:/TrainingMVC04/memberList.do";
 		}else {
 			throw new ServletException("cant delete"); 
 		}

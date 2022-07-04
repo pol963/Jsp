@@ -20,7 +20,7 @@ public class MemberContentCotroller implements Controller{
 		MemberVO vo = dao.memberContent(num);
 		request.setAttribute("vo", vo);
 		
-		return "member/memberContent.jsp";
+		return "memberContent";
 	}
 
 }

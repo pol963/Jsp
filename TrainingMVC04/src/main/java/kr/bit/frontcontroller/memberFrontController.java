@@ -26,7 +26,7 @@ public class memberFrontController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
-		request.setCharacterEncoding("euc-kr");
+		request.setCharacterEncoding("UTF-8");
 		
 		String url = request.getRequestURI();
 		//System.out.println(url);
@@ -39,46 +39,20 @@ public class memberFrontController extends HttpServlet {
 		System.out.println(command);
 		Controller controller = null;
 		String nextPage = null;
-		if(command.equals("/memberList.do")) {
-			
-			controller = new MemberListController();
-			nextPage=controller.requestHandler(request, response);
-			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
-			rd.forward(request, response);
-			
-		}else if(command.equals("/memberInsert.do")) {
-			
-			controller = new MemberInsertController();
-			nextPage=controller.requestHandler(request, response);
-			response.sendRedirect(nextPage);
-			
-		}else if(command.equals("/memberRegister.do")) {
-			
-			controller = new MemberRegisterController();
-			nextPage=controller.requestHandler(request, response);
-			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
-			rd.forward(request, response);
-			
-		}else if(command.equals("/memberContent.do")) {
-			
-			controller = new MemberContentCotroller();
-			nextPage=controller.requestHandler(request, response);
-			RequestDispatcher rd = request.getRequestDispatcher(nextPage);
-			rd.forward(request, response);
-			
-		}else if(command.equals("/memberUpdate.do")) {
-			
-			controller = new MemberUpdateController();
-			nextPage=controller.requestHandler(request, response);
-			response.sendRedirect(nextPage);
-			
-		}else if(command.equals("/memberDelete.do")) {
-			
-			controller = new MemberDeleteController();
-			nextPage=controller.requestHandler(request, response);
-			response.sendRedirect(nextPage);
-			
-		}//if_end
+		
+		HandlerMapping mapping = new HandlerMapping();
+		controller = mapping.getController(command);
+		nextPage = controller.requestHandler(request, response);
+		
+		if(nextPage!=null) {
+			if(nextPage.indexOf("redirect:")!= -1) {
+				response.sendRedirect(nextPage.split(":")[1]);
+			}else {
+				RequestDispatcher rd = 
+						request.getRequestDispatcher(ViewResolver.makeView(nextPage));
+				rd.forward(request, response);
+			}
+		}
 		
 	}
 

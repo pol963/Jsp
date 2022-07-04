@@ -38,7 +38,7 @@ public class MemberInsertController implements Controller{
 		int cnt = dao.memberInsert(vo);
 		String nextPage = null;
 		if(cnt>0) {
-			nextPage = "/TrainingMVC04/memberList.do";
+			nextPage = "redirect:/TrainingMVC04/memberList.do";
 			
 			
 		}else {

@@ -31,7 +31,7 @@ public class MemberUpdateController implements Controller{
 		String nextPage = null;
 		
 		if(cnt>0) {
-			nextPage="/TrainingMVC04/memberList.do";
+			nextPage="redirect:/TrainingMVC04/memberList.do";
 			
 			
 		}else {

@@ -13,7 +13,7 @@ public class MemberRegisterController implements Controller{
 			throws ServletException, IOException {
 
 		
-		return "member/memberRegister.html";
+		return "memberRegister";
 	}
 
 }
