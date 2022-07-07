@@ -155,7 +155,7 @@
 	<Context docBase="C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\eGovFrame-4.0.0\workspace.edu\WEB\webapp" path="/web"/>
 		
       
-      <Context docBase="C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\TrainingMVC04" path="/TrainingMVC04" reloadable="true" source="org.eclipse.jst.jee.server:TrainingMVC04"/></Host>
+      <Context docBase="C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MVC05" path="/MVC05" reloadable="true" source="org.eclipse.jst.jee.server:MVC05"/></Host>
     </Engine>
   </Service>
 </Server>
