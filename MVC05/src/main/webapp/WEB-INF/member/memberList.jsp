@@ -28,7 +28,7 @@
 
 </head>
 <body>
-MVC04 예제 FrontController+POJO 의 형식.
+MVC05 예제 JDBC에서 MyBatis로.
 	<table class="table table-bordered">
 		<tr>
 			<td>번호</td>	

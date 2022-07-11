@@ -27,6 +27,7 @@ public class MemberDAO {
 	}
 	
 	
+	//회원리스트 전체보기.
 	public List<MemberVO> memberList() {
 		
 		//Connection+statment
@@ -36,10 +37,46 @@ public class MemberDAO {
 		session.close();
 		return list;
 		
+	}
+	
+	//회원가입.
+	public int memberInsert(MemberVO vo) {
+		
+		SqlSession session = sqlSessionFactory.openSession(); //JDBC의 Connection
+		int cnt = session.insert("memberInsert", vo);
+		session.commit(); //insert... 등 실제로 DB에 변동이 있다면 commit로 확정지어줘야 합니다.
+		session.close();
+		return cnt;
 		
 	}
 	
+	//회원삭제.
+	public int memberDelete(int num) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = session.delete("memberDelete", num);
+		session.commit();
+		session.close();
+		return cnt;
+	}
+	
+	//상세보기
+	public MemberVO memberContent(int num) {
+		SqlSession session = sqlSessionFactory.openSession();
+		MemberVO vo = session.selectOne("memberContent",num);
+		session.close();
+		return vo;
+	}
+	
+	
+	//업데이트
 		
+	public int memberUpdate(MemberVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = session.update("memberUpdate", vo);
+		session.commit();
+		session.close();
+		return cnt;
+	}
 		
 	
 }
