@@ -18,7 +18,10 @@
       </dataSource>
     </environment>
   </environments>
+  
+  <!-- resource맵퍼가 어디있는지에 대한 경로 설정. -->
   <mappers>
     <mapper resource="kr/bit/mybatis/MemberMapper.xml"/>
   </mappers>
 </configuration>
+

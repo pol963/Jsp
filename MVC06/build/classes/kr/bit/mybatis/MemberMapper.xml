@@ -2,8 +2,11 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!-- namespace란 마음대로 적어도되나 일반적으로 패키지와 맵퍼파이의 이름으로 지정. -->
+  
 <mapper namespace="kr.bit.mybatis.MemberMapper">
-
+	
 	<select id="memberList" resultType="memberVO">
 	select * from member
 	</select>

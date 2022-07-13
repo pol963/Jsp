@@ -33,6 +33,7 @@ public class MemberUpdateController implements Controller{
 		MemberDAO dao = new MemberDAO();
 		int cnt = dao.memberUpdate(vo); //업데이트.
 		
+		
 		String nextPage = null;
 		
 		if (cnt > 0) {
