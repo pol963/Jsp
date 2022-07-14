@@ -5,7 +5,22 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-07-13T07:00:00Z</updated>
+  <updated>2022-07-14T09:39:09Z</updated>
+  <entry>
+    <title>Spring Framework 6.0.0-M5 and 5.3.22 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/07/14/spring-framework-6-0-0-m5-and-5-3-22-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2022-07-14:4852</id>
+    <updated>2022-07-14T09:39:09Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Framework &lt;code&gt;6.0.0-M5&lt;/code&gt; and &lt;code&gt;5.3.22&lt;/code&gt; are available now.&lt;/p&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;5.3.22&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.3.22"&gt;45 fixes and improvements&lt;/a&gt; and is a recommended upgrade for all Spring production scenarios.&lt;/p&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;6.0.0-M5&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v6.0.0-M5"&gt;85 additional fixes and improvements&lt;/a&gt; specific to the 6.0 branch.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.3.22/reference/html/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Native 0.12.1 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2022/07/13/spring-native-0-12-1-available-now" />
@@ -660,32 +675,6 @@ dependencyManagement {&#xD;
 &lt;p&gt;Please note that workarounds are not necessarily mutually exclusive since security is best done &amp;ldquo;in-depth&amp;rdquo;.&lt;/p&gt;&lt;h4&gt;&lt;a href="#using-array-syntax" class="anchor" name="using-array-syntax"&gt;&lt;/a&gt;Using Array Syntax&lt;/h4&gt;
 &lt;p&gt;If your application requires dynamic SpEL expressions that are controlled by user input, then referencing SpEL arguments using the array syntax &lt;code&gt;[0]&lt;/code&gt; is a safe way to access SpEL arguments.&lt;/p&gt;&lt;h4&gt;&lt;a href="#implementing-a-custom-repository-method" class="anchor" name="implementing-a-custom-repository-method"&gt;&lt;/a&gt;Implementing a custom repository method&lt;/h4&gt;
 &lt;p&gt;Replacing the SpEL expression with a custom repository method implementation is a viable workaround to assemble your dynamic query within the application code. Refer to the &lt;a href="https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#repositories.single-repository-behavior"&gt;reference documentation on repository customization&lt;/a&gt; for further details.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tools 4.15.1 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/06/18/spring-tools-4-15-1-released" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Martin Lippert</name>
-    </author>
-    <id>tag:spring.io,2022-06-18:4834</id>
-    <updated>2022-06-18T07:00:00Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-&lt;p&gt;I am happy to announce the 4.15.1 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Theia.&lt;/p&gt;&lt;h4&gt;&lt;a href="#fixes-and-improvements" class="anchor" name="fixes-and-improvements"&gt;&lt;/a&gt;fixes and improvements&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: VScode incorrectly suggests removing @Autowired annotation from methods (&lt;a href="https://github.com/spring-projects/sts4/issues/787"&gt;#787&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: VScode quick fix should not suggest removing @Autowired annotation from JUnit tests (&lt;a href="https://github.com/spring-projects/sts4/issues/786"&gt;#786&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: Not able to extract the new version of spring-tool-suite-4-4.15.0.RELEASE-e4.24.0-win32.win32.x86_64.self-extracting.jar on windows 11 (&lt;a href="https://github.com/spring-projects/sts4/issues/788"&gt;#788&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: Cannot open Spring Boot Language Server Java Editor settings menu (&lt;a href="https://github.com/spring-projects/sts4/issues/789"&gt;#789&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Theia, please go visit:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog#2022-06-17-4151-release-incl-language-servers-version-1360"&gt;https://github.com/spring-projects/sts4/wiki/Changelog#2022-06-17-4151-release-incl-language-servers-version-1360&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spring Tools 4.15.2 is scheduled to be released in early August 2022.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

@@ -4,9 +4,26 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.bit.mybatis.MemberMapper">
 
+		
+	<!-- 
+	select태그의 id는 DAO에서 SQL문을 사용할때 JDBC와는 다르게 SQL을 분리하여 사용하기 때문에 DAO에서 Mapper의 
+	SQL을 호출하여 사용할때 필요한 id값 이다. DAO에서 sql문을 사용할때 id를 통해서 어떠한 sql을 사용할지 결정. 
+	id는 보통 호출한 메서드의 이름과 동일.
+	 -->
+	 
+	<!-- 
+	selectList메서드는 vo에 묶는것도 묶은데이터를 다시 List에 담는것도 알아서 하는 메서드 입니다.
+	List에 타입을 정하여 받는것은 알아서 하고 DAO에서 정해주는것에 비해 
+	어떠한 VO에 담는것은 정해져 있지 않습니다. ex) MemberVO일수도 있고 MemberVO2일수도 있습니다.
+	따라서 이러한 데이터 타입을 정해주는 속성이 resultType속성입니다.
+	원칙은 memberVO앞에 VO가 담겨있는 패키지경로까지전부 적어야 하나 이를 간편하게 하기위해 
+	 -->
+
+
 	<select id="memberList" resultType="memberVO">
 	select * from member
-	</select>
+	</select> 
+
 	
 	<insert id="memberInsert" parameterType="memberVO">
 	insert into member(id, pass, name, age, email, phone)

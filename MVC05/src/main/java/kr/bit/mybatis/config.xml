@@ -4,6 +4,12 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
   <properties resource="kr/bit/mybatis/db.properties" />
+  
+  <!-- 
+  Mapper의 resultType의 패키지 경로를 단축시키기 위해 사용하는 속성.
+  아래 코드는 kr.bit.moder.MemberVO라는 경로를 앞으로는 memberVO로 간편하게 사용할 수 있다는 코드입니다.
+   -->
+   
   <typeAliases>
   	<typeAlias type="kr.bit.model.MemberVO" alias="memberVO" />
   </typeAliases>
