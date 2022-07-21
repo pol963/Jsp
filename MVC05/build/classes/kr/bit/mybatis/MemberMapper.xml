@@ -19,21 +19,33 @@
 	원칙은 memberVO앞에 VO가 담겨있는 패키지경로까지전부 적어야 하나 이를 간편하게 하기위해 
 	 -->
 
-
 	<select id="memberList" resultType="memberVO">
 	select * from member
 	</select> 
 
 	
+	 <!-- 
+	 호출id를 memberInsert로 지정. parameterType는 sql문안의 데이터에 어떠한 파라미터 타입이 담길것인지
+	 명시하여 줍니다. memberVO타입의 데이터가 각 파라미터에 담길것을 명시. memberVO는 원래 kr.bit.model.MemberVO이나 config파일의
+	 typeAliases 태그 속성에 의해 memberVO로 줄여짐.
+	 value의 파라미터들은 JDBC에서는 ?로 표기한뒤 값을 대입햇지만 MyBatis에서는 #{}의 형식으로 값 지정. 
+	 #{}안에 들어갈 데이터 타입을 parameterType가 지정.
+	  -->
 	<insert id="memberInsert" parameterType="memberVO">
 	insert into member(id, pass, name, age, email, phone)
 	value(#{id},#{pass},#{name},#{age},#{email},#{phone})
 	</insert>
-
+	
+	
+	
+	
+	
+	<!-- parameterType은 클래스타입으로 int가 아닌 integer가 더 좋습니다. -->
 	<delete id="memberDelete" parameterType="Integer">
 	delete from member where num=#{num}
 	</delete>
 	
+	<!-- 파라메터타입을정해주는 parameterType속성과 데이터를 어떠한 VO로묶어주는지 지정해주는 resultType속성. -->
 	<select id="memberContent" parameterType="Integer" resultType="memberVO">
 	select * from member where num=#{num}
 	</select>

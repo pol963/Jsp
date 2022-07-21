@@ -55,13 +55,17 @@ public class MemberDAO {
 	//회원가입.
 	public int memberInsert(MemberVO vo) {
 		
+		//connection 받아오기. ->sqlSession받아오기.
 		SqlSession session = sqlSessionFactory.openSession(); //JDBC의 Connection
+		//insert메서드로 memberInsert맵핑한 Id로 sql의 결과 받아오기 매개변수로 vo넘겨주기.
 		int cnt = session.insert("memberInsert", vo);
 		session.commit(); //insert... 등 실제로 DB에 변동이 있다면 commit로 확정지어줘야 합니다.
 		session.close();
 		return cnt;
 		
 	}
+	
+	
 	
 	//회원삭제.
 	public int memberDelete(int num) {
@@ -72,6 +76,8 @@ public class MemberDAO {
 		return cnt;
 	}
 	
+	
+	//selectOne메서드는 한사람의 데이터만 가져옵니다. not 전부. ->vo로 리턴합니다.
 	//상세보기
 	public MemberVO memberContent(int num) {
 		SqlSession session = sqlSessionFactory.openSession();

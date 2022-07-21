@@ -50,10 +50,16 @@ public class MemberFrontController extends HttpServlet {
 		Controller controller=null;
 		String nextPage=null;
 		
-		//핸들러 매핑.
+		
+		//핸들러 매핑. HandlerMapping생성자가 호출될때 객체또한생성 .
 		HandlerMapping mapping = new HandlerMapping();
+		
+		//getController에 패스와 .do를 요청하여 맞는 value값(POJOController)을 리턴받아서 리턴받은데이터를 controller에 저장.
 		controller=mapping.getController(command); 	
+		
+		//controller안에 있는 경로와 클라이언트의 요청에 담긴 request,response데이터를 같이 nextPage에 저장.
 		nextPage = controller.requestHandler(request, response);
+		
 		
 		
 		//Forward와 Ridiract 별도 처리.-> 중복코드 줄이기.

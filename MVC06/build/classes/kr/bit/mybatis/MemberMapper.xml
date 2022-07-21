@@ -5,29 +5,87 @@
   
   <!-- namespace란 마음대로 적어도되나 일반적으로 패키지와 맵퍼파이의 이름으로 지정. -->
   
+  <!-- 
+	select태그의 id는 DAO에서 SQL문을 사용할때 JDBC와는 다르게 SQL을 분리하여 사용하기 때문에 DAO에서 Mapper의 
+	SQL을 호출하여 사용할때 필요한 id값 이다. DAO에서 sql문을 사용할때 id를 통해서 어떠한 sql을 사용할지 결정. 
+	id는 보통 호출한 메서드의 이름과 동일.
+	 -->
+	 
+	<!-- 
+	selectList메서드는 vo에 묶는것도 묶은데이터를 다시 List에 담는것도 알아서 하는 메서드 입니다.
+	List에 타입을 정하여 받는것은 알아서 하고 DAO에서 정해주는것에 비해 
+	어떠한 VO에 담는것은 정해져 있지 않습니다. ex) MemberVO일수도 있고 MemberVO2일수도 있습니다.
+	따라서 이러한 데이터 타입을 정해주는 속성이 resultType속성입니다.
+	원칙은 memberVO앞에 VO가 담겨있는 패키지경로까지전부 적어야 하나 이를 간편하게 하기위해 
+	 -->
+  
+  
 <mapper namespace="kr.bit.mybatis.MemberMapper">
 	
 	<select id="memberList" resultType="memberVO">
 	select * from member
 	</select>
 	
+	
+	 <!-- 
+	 호출id를 memberInsert로 지정. parameterType는 sql문안의 데이터에 어떠한 파라미터 타입이 담길것인지
+	 명시하여 줍니다. memberVO타입의 데이터가 각 파라미터에 담길것을 명시. memberVO는 원래 kr.bit.model.MemberVO이나 config파일의
+	 typeAliases 태그 속성에 의해 memberVO로 줄여짐.
+	 value의 파라미터들은 JDBC에서는 ?로 표기한뒤 값을 대입햇지만 MyBatis에서는 #{}의 형식으로 값 지정. 
+	 #{}안에 들어갈 데이터 타입을 parameterType가 지정.
+	  -->
+	
 	<insert id="memberInsert" parameterType="memberVO">
 	insert into member(id, pass, name, age, email, phone)
 	value(#{id},#{pass},#{name},#{age},#{email},#{phone})
 	</insert>
 
+
+
+	<!-- parameterType은 클래스타입으로 int가 아닌 integer가 더 좋습니다. -->
 	<delete id="memberDelete" parameterType="Integer">
 	delete from member where num=#{num}
 	</delete>
 	
+	<!-- 파라메터타입을정해주는 parameterType속성과 데이터를 어떠한 VO로묶어주는지 지정해주는 resultType속성. -->
 	<select id="memberContent" parameterType="Integer" resultType="memberVO">
 	select * from member where num=#{num}
 	</select>
+	
 	
 	<update id="memberUpdate" parameterType="memberVO" >
 	update member
 	set age=#{age}, email=#{email}, phone=#{phone}
 	where num=#{num}
 	</update>
+	
+	
+	<!-- 
+	로그인sql구현.
+	id는 호출메서드와 이름이 같게 설정하는것이 보통.
+	parameterType -> sql이호출될떄 넘어올 파라메타 타입 설정.
+	resultType -> 결과값을 어떠한 타입으로 지정할지. -> user_name를 리턴해주기로 했기 때문에 String 지정.
+	DB에서 user_name는 name로 리정되어 있습니다 DB의 member테이블.
+	 -->
+	<select id="memberLogin" parameterType="memberVO" resultType="String">
+	select name from member where id=#{id} and pass=#{pass}
+	
+	</select>
+	
 
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
