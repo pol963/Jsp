@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import kr.bit.model.MemberDAO;
 import kr.bit.model.MemberVO;
@@ -44,8 +45,12 @@ public class MemberLoginController implements Controller{
 			//가지고 오는것이 getSession() getAttribute() 
 			//위의 코드로 가지고왓는대 없다면 id등이 없다면 회원인증을 안한것. 따라서 jsp페이의 기능...등을 이용x
 			//즉,다른jsp페이지에서 인증이되었다면 해당 기능을 이용하거나 못 이용하거나 페이지 이동 등등을 지정하기위해 객체바인딩 -> 서버에 httpSession에 객체바인딩.
-			request.getSession().setAttribute("userId", user_id);
-			request.getSession().setAttribute("userName", user_name);
+			
+			//클라이언트의 요청이 있을때 서버에서 만드는 httpsession타입의 session생성후 세션가져오기.
+			HttpSession session = request.getSession(); 
+			//클라이언트와 서버에 연결되어 있는 session에 객체바인딩.
+			session.setAttribute("userId", user_id);
+			session.setAttribute("userName", user_name);
 			
 		}else {
 			
