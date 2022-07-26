@@ -77,9 +77,13 @@ MVC06 회원 정보 관리 -> 로그인후 관리.
 			<!-- bootstrap3사용 -> 페널 -->
 			<div class="panel-heading">
 			
+				<!-- 회원인증 성공시 로그인화면 가리기. if문의 조건이 거짓이 되면(로그인정보가 일치하면) 거짓이되기에 if문안에있는
+					코드가 안보이게 됩니다. 
+					만약 데이터가 없다면 조건문이 참이 되기에 아래 코드가 계속보입니다.
+					-->
+				<c:if test="${sessionScope.userId==null || sessionScope.userId=='' }"> 	
 				<!-- bootstrap3 form -->
 				<form class="form-inline" action="${ctx}/memberLogin.do" method="post">
-				
 					<div class="form-group">
 						<label for="user_id">ID:</label> 
 						<input type="text" class="form-control" id="user_id" name="user_id">
@@ -89,14 +93,25 @@ MVC06 회원 정보 관리 -> 로그인후 관리.
 						<label for="pwd">Password:</label> 
 						<input type="password" class="form-control" id="password" name="password">
 					</div>
-					
 						<!-- 
 						자바스크립트문법->로그인을 누르면  check메서드를 처리 리턴해주는것. 리턴값이 false라면 submit작동x
 						onclick -> 개체를 클릭시 이벤트 발생.
 						-->
 					<button type="submit" class="btn btn-default" onclick="return check()">로그인</button>
-					
 				</form>
+				</c:if>
+				
+				<!-- 
+				회원인증에 성공할시(데이터가 일치한다면 나올 화면) 로그아웃 활성화.  
+				MemberLoginCotroller에서 setAttribute로 id와 name를 객체바인딩 해주었기에 el문법으로 쉽게접근이 가능.
+				데이터가 있면 if문이 참이 되기에 if문 안의 코드가 보이게 됩니다.
+				-->
+				<c:if test="${sessionScope.userId!=null && sessionScope.userId!='' }">
+				${sessionScope.userName}님 환영합니다.
+				<button type="button" class="btn btn-warning">로그아웃</button>
+				</c:if>
+				
+				
 			</div>						<!-- heading -->
 			
 			<div class="panel-body">
@@ -124,8 +139,22 @@ MVC06 회원 정보 관리 -> 로그인후 관리.
 									<td>${vo.age}</td>
 									<td>${vo.email}</td>
 									<td>${vo.phone}</td>
+									
+									<!-- 본인의 아이디와 같다면 disabled속성이 없는if문을 실행 삭제버튼활성화.
+									vo.id는 DAO에서 넘어온 id userID는 Controller에서 넘어온 id(입력한) -->
+									<c:if test="${sessionScope.userId==vo.id}">
 									<td><input type="button" value="삭제"
-										class="btn btn-warning" onclick="deleteFn(${vo.num})"></td>
+										class="btn btn-warning" onclick="deleteFn(${vo.num})"
+										></td> <!-- disabled버튼 비활성화 속성. -->
+									</c:if>
+									
+									<!-- 본인 아이디와 다르다면 비활성화. -->
+									<c:if test="${sessionScope.userId!=vo.id}">
+									<td><input type="button" value="삭제"
+										class="btn btn-warning" onclick="deleteFn(${vo.num})"
+										disabled="disabled"></td> <!-- disabled버튼 비활성화 속성. -->
+									</c:if>	
+										
 								</tr>
 							</c:forEach>
 							<tr>
