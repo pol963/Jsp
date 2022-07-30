@@ -83,6 +83,7 @@ public class MemberDAO {
 	public String memberLogin(MemberVO vo) {
 		//session을 하나 얻어오기 sqlSessionFactory에서.
 		SqlSession session = sqlSessionFactory.openSession();
+		
 		//user_name를 반환하기로 하여서 selectOne메소드를 이용해 하나의 값만 리턴받아오기.
 		String user_name = session.selectOne("memberLogin",vo);
 		session.close();

@@ -62,6 +62,11 @@
 		return true;
 	}
 	
+	function logout() {
+		location.href="<c:url value='/memberLogout.do'/>"; //MVC06/memberLogout.do
+	}	
+	
+	
 	
 
 </script>
@@ -108,7 +113,7 @@ MVC06 회원 정보 관리 -> 로그인후 관리.
 				-->
 				<c:if test="${sessionScope.userId!=null && sessionScope.userId!='' }">
 				${sessionScope.userName}님 환영합니다.
-				<button type="button" class="btn btn-warning">로그아웃</button>
+				<button type="button" class="btn btn-warning" onclick="logout()">로그아웃</button>
 				</c:if>
 				
 				

@@ -23,6 +23,24 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+<!-- 
+보통 bootstrap3로 레이아웃을 잡습니다 -> panels사용. 
+bootstrap이란 프레임워크->재사용가능한 요소의 집합.ㅌ	
+ -->
+<div class="container">
+<c:if test="${sessionScope.userId != null && sessionScope.userId !='' }">
+	<h2>${sessionScope.userName}님 반갑습니다.</h2>
+</c:if>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">Panel Heading</div>
+    <div class="panel-body">Panel Content</div>
+  </div>
+</div>
+
+
+
 	<form action="${ctx}/memberUpdate.do" method="post">
 	<input type="hidden" name="num" value="${vo.num}"/>
 	<table class="table table-bordered">
