@@ -86,6 +86,7 @@ MVC06 회원 정보 관리 -> 로그인후 관리.
 					코드가 안보이게 됩니다. 
 					만약 데이터가 없다면 조건문이 참이 되기에 아래 코드가 계속보입니다.
 					-->
+					
 				<c:if test="${sessionScope.userId==null || sessionScope.userId=='' }"> 	
 				<!-- bootstrap3 form -->
 				<form class="form-inline" action="${ctx}/memberLogin.do" method="post">
