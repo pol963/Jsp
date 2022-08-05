@@ -91,6 +91,23 @@ public class MemberDAO {
 		
 		
 	}
+	
+	//회원가입시 입력한 아이디의 중복체크 버튼으 눌러을 때 db와 연동하여 체크해주는 메서드 구현.
+	public String memberDbCheck(String id) {
+		SqlSession session = sqlSessionFactory.openSession();
+		//memberDbCheck메서드를 이용하여 데이터를 받아오기. id or null 이 반환.
+		String dbId = session.selectOne("memberDbCheck", id); 
+		
+		//selectOne메서드를 이용하여 받은 값을 변수에 저장하여 yes인지no인지를 구분하기 위한 변수 생성.
+		String idDouble="NO";
+		
+		//받은 값을 null체크.
+		if(dbId!=null) { //dbId가 null이 아니라는 이야기는 DB에서 일치하는 id를 리턴받았다는 것 -> 아이디가 중복.
+			idDouble="YES";
+		}
+		
+		return idDouble;
+	}
 		
 	
 }

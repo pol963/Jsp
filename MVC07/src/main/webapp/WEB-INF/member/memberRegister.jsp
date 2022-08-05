@@ -54,10 +54,11 @@
 				});
 			
 		}
+		
 		//요청 성공시 데이터 받아와서 처리하는 콜백함수 구현.
 		function dbCheck(data) {
 			//요청시에 데이터를 받아왔는데 데이터가 있다면 중복이 되었다는 것.
-			if(data != "null"){
+			if(data != "NO"){
 				alert("중복된 id입니다.");
 				$("#id").focus();
 			}else{

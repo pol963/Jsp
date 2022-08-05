@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import kr.bit.controller.Controller;
 import kr.bit.controller.MemberContentController;
+import kr.bit.controller.MemberDbcheckController;
 import kr.bit.controller.MemberDeleteController;
 import kr.bit.controller.MemberInsertController;
 import kr.bit.controller.MemberListController;
@@ -32,6 +33,7 @@ public class HandlerMapping {
 		mappings.put("/memberDelete.do", new MemberDeleteController());
 		mappings.put("/memberLogin.do", new MemberLoginController());  
 		mappings.put("/memberLogout.do", new MemberLogoutController());
+		mappings.put("/memberDbcheck.do", new MemberDbcheckController());
 		
 	}
 	
