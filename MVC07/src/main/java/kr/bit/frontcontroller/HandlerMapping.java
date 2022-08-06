@@ -1,8 +1,11 @@
+
 package kr.bit.frontcontroller;
 
 import java.util.HashMap;
 
 import kr.bit.controller.Controller;
+import kr.bit.controller.MemberAjaxDeleteController;
+import kr.bit.controller.MemberAjaxListController;
 import kr.bit.controller.MemberContentController;
 import kr.bit.controller.MemberDbcheckController;
 import kr.bit.controller.MemberDeleteController;
@@ -34,6 +37,10 @@ public class HandlerMapping {
 		mappings.put("/memberLogin.do", new MemberLoginController());  
 		mappings.put("/memberLogout.do", new MemberLogoutController());
 		mappings.put("/memberDbcheck.do", new MemberDbcheckController());
+		//memberAjaxList
+		mappings.put("/memberAjaxList.do", new MemberAjaxListController());
+		//memberAjaxDelete
+		mappings.put("/memberAjaxDelete.do", new MemberAjaxDeleteController());
 		
 	}
 	
@@ -46,6 +53,6 @@ public class HandlerMapping {
 		
 	}
 	
-	
-	
 }
+
+

@@ -1,4 +1,4 @@
-<%@page import="kr.bit.model.*"%>
+ <%@page import="kr.bit.model.*"%>
 <%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -67,8 +67,69 @@
 	}	
 	
 	
+	//collapse의 onclick이벤트에 의해 실행되는 메서드.
+	/* collapse1아이디를 가진 div의 .panel-body class에 접근 하여 html을 가져옴. 가져온 값을 html에 저장. */
+	/* var html =  $("#collapse1 .panel-body").html();
+	alert(html); */
+	function memberList() {
+		$.ajax({
+			url : "<c:url value='/memberAjaxList.do'/>", //서버로 요청
+			type : "get",
+			dataType : "json",
+			success : resultHtml, //<--회원리스트로 받기.([{},{},{}])
+			error : function () { error("error");	}
+		});
+	}
 	
-
+	
+	//콜백함수 서버와 통신후에 결과를 json데이터타입으로 받아서 콜백함수가 데이터를 받음.
+	  function resultHtml(data){	
+		//테이블변수안에 틀을 하나씩 넣어주기  
+		  var html="<table class='table table-hover'>";
+		  html+="<tr>";
+		  html+="<th>번호</th>";
+		  html+="<th>아이디</th>";
+		  html+="<th>비밀번호</th>";
+		  html+="<th>이름</th>";
+		  html+="<th>나이</th>";
+		  html+="<th>이메일</th>";
+		  html+="<th>전화번호</th>";
+		  html+="<th>삭제</th>";
+		  html+="</tr>";	
+		  //제이쿼리 반복문 $.each data에서 데이터를 빼서 index를받고 obj로 객체받기.
+			//콜백함수가 받은 json데이터를 반복문 메서드를 이용해서 각인덱스의 데이터를 obj에 넣어주기.
+		  $.each(data, function(index, obj){
+			  html+="<tr>";
+			  html+="<td>"+obj.num+"</td>";
+			  html+="<td>"+obj.id+"</td>";
+			  html+="<td>"+obj.pass+"</td>";
+			  html+="<td>"+obj.name+"</td>";
+			  html+="<td>"+obj.age+"</td>";
+			  html+="<td>"+obj.email+"</td>";
+			  html+="<td>"+obj.phone+"</td>";		  
+			  html+="<td><input type='button' value='삭제' class='btn btn-warning' onclick='delFn("+obj.num+")'></td>";
+			  html+="</tr>";
+		  });	  
+		  html+="</table>";	  
+		  //jquery문법(javascript를 간편하게 줄인것 더 강력) 으로 id선택후 자식클래스 선택후 html을 보여주기.
+		  $("#collapse1 .panel-body").html(html);	  
+	  }
+	
+	//ajax 삭제기능.
+	function delFn(num) {
+		$.ajax({
+			url : "<c:url value='/memberAjaxDelete.do'/>",
+			type : "get",
+			data : {"num":num},
+			success : memberList,
+			error : function(){ alert("error");	}
+			
+		});
+		
+	}
+	
+	
+	
 </script>
 
 
@@ -177,16 +238,22 @@ MVC07 회원 정보 관리 -> Ajax
 				회원관리 ERP 시스템
 			</div>
 		</div>
+	
+	<div class="panel-group">
+	  <div class="panel panel-default">
+	    <div class="panel-heading">
+	      <h4 class="panel-title"> 
+	      	<!-- href속성은 아래 div의 id를 가르킨다. -->
+	        <a data-toggle="collapse" href="#collapse1" onclick="memberList()">회원리스트보기</a>
+	      </h4>
+	    </div>
+	    <div id="collapse1" class="panel-collapse collapse">
+	      <div class="panel-body">Panel Body</div>
+	      <div class="panel-footer">Panel Footer</div>
+	    </div>
+	  </div>
+	</div>
+			
 	</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
