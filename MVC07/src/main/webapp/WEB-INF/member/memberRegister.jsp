@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
@@ -6,6 +6,7 @@
     
 <!DOCTYPE html>
 <html>
+ 
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -16,14 +17,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	
 	<script type="text/javascript">
-		function add() {
-			//form의 데이터 유효성체크 부분 넣기 
-			document.form1.action="<c:url value='/memberInsert.do' />"
-			document.form1.submit();
-		}
+	
+	function add(){
+    	// form의 데이터 유효성 체크..
+    	document.form1.action="<c:url value='/memberInsert.do'/>"; 
+    	document.form1.submit();
+     }
 		function frmreset() {
 			document.form1.reset();
 		}
+		
 		function doublecheck() {
 			if($("#id").val()==''){
 				alert("아이디를 입력하세요");
@@ -37,7 +40,7 @@
 			$.ajax({
 				
 				/* 경로 */
-				url : "<c:url value='/memberDbcheck.do' />",
+				url : "<c:url value='/memberDbcheck.do'/>",
 				
 				/* 서버가 요청하는 타입 */
 				type : "POST",
@@ -54,6 +57,7 @@
 				});
 			
 		}
+	 
 		
 		//요청 성공시 데이터 받아와서 처리하는 콜백함수 구현.
 		function dbCheck(data) {
@@ -83,7 +87,7 @@
 				//데이터를 서버에 전송하기 위한 Ajax
 				$.ajax({
 					
-					url : "<url : value='/fileAdd.do' />", //fileAdd.do -> 파일업로드컨트롤러.
+					url : "<c:url value='/fileAdd.do'/>", // fileAdd.do(파일업로드), //fileAdd.do -> 파일업로드컨트롤러.
 					type : "post",
 					data : formData,
 					
@@ -102,8 +106,14 @@
 							
 						//form1태그에서 add엿을때는 위해서 바로 insert를 해줫으니ㅏ add2메서드에서는 insert를 아직안해줘기에 구현
 						//파일이 업로드가 된 후에는 실제 데이터(각 파라메터)들을 업로드 시켜줘야 합니다.
-						document.form1.action="<c:url value='/memberInsert.do'>";
+						//파일이 있는 경우에 fadd를 넣어서 넘겨주기.
+						document.form1.action="<c:url value='/memberInsert.do'/>?mode=fadd";
 						document.form1.submit();
+					//alert(data);
+					
+					//C:\eGovFrame-4.0.0\workspace.edu\.metadata\.plugins\
+					//org.eclipse.wst.server.core\tmp0\wtpwebapps\MVC07 -> 임시업로드 경로
+					
 					},
 					error : function(){ alert("error"); }
 				
@@ -111,18 +121,16 @@
 				});
 				
 			}else{
-				//없는 경우
-				
-				
+				//없는 경우 -> 넘겨줄 파일이 없다해도 가입은 가능하게끔.
+				//파일이 없는경우 mode에 add를 담아서 넘겨주기.
+				document.form1.action="<c:url value='/memberInsert.do'/>?mode=add";
+				document.form1.submit();
 			}
 		}
 	</script>
 </head>
 <body>
-
-
 	<!-- 회원 등록 -->
-
 <div class="container">
   <h2>회원 가입 화면</h2>
   <div class="panel panel-default">
@@ -208,11 +216,13 @@
 		    <!-- 
 		    ajax에 의해 파일이 성공적으로 넘어갔다면 data(파일이름)을 리턴받아옵니다.
 		    그 파일이름을 filename에 저장 hidden속성에 의해 눈에 보이지 않게 회원가입시 넘어갑니다. -->
-		    <input type="hidden" id = "filename" name="filename" value="" />
+		    <input type="hidden" id = "filename" name="filename" value=""/>
 		    
 		 </form>
 		
 	</div>
+	
+	
     <div class="panel-footer" style="text-align: center;">
     
     	<c:if test="${sessionScope.userId == null || sessionScope.userId == '' }">
@@ -230,11 +240,8 @@
 		class='btn btn-success'/>
 	</div>
   </div>
-</div>
-
-
-
+</div> 
 </body>
 </html>
 
-	
+  

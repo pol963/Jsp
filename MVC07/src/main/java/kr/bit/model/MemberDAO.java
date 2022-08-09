@@ -39,7 +39,7 @@ public class MemberDAO {
 		
 	}
 	
-	//회원가입.
+	//회원가입.파일업로드가 없을시에.
 	public int memberInsert(MemberVO vo) {
 		
 		SqlSession session = sqlSessionFactory.openSession(); //JDBC의 Connection
@@ -49,6 +49,17 @@ public class MemberDAO {
 		return cnt;
 		
 	}
+	
+	//회원가입. 파일업로드가 있을시에.
+		public int memberInsertFile(MemberVO vo) {
+			
+			SqlSession session = sqlSessionFactory.openSession(); //JDBC의 Connection
+			int cnt = session.insert("memberInsertFile", vo);
+			session.commit(); //insert... 등 실제로 DB에 변동이 있다면 commit로 확정지어줘야 합니다.
+			session.close();
+			return cnt;
+			
+		}
 	
 	//회원삭제.
 	public int memberDelete(int num) {

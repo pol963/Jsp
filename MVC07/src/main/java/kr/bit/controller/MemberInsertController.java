@@ -26,6 +26,16 @@ public class MemberInsertController implements Controller{
 		String phone = request.getParameter("phone");
 		
 		MemberVO vo = new MemberVO();
+		
+		//회원가입화면에서 파일이 추가가 되거나 되지않거나에 따라 파라메터 갯수가 변하기에 if문으로 분류
+		
+		if(request.getParameter("mode").equals("fadd")) {
+			//히든속성으로 넘어오는 input태그 파라메터.
+			String filename = request.getParameter("filename");
+			vo.setFilename(filename);
+		}
+		
+		
 		vo.setId(id);
 		vo.setPass(pass);
 		vo.setName(name);
@@ -34,7 +44,14 @@ public class MemberInsertController implements Controller{
 		vo.setPhone(phone);
 		
 		MemberDAO dao = new MemberDAO();
-		int cnt =dao.memberInsert(vo);
+		int cnt=-1;
+		if(request.getParameter("mode").equals("fadd")) {
+			cnt =dao.memberInsertFile(vo); //파일 이름을 저장해야하는 경우
+		}else {
+			cnt =dao.memberInsert(vo);//파일 이름을 저장할 필요 없는경우
+		}
+		
+		
 		//PrintWriter out = response.getWriter();
 		String nextPage = null;
 		
