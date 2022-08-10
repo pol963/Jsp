@@ -23,7 +23,7 @@
 <mapper namespace="kr.bit.mybatis.MemberMapper">
 	
 	<select id="memberList" resultType="memberVO">
-	select * from member
+	select * from member1
 	</select>
 	
 	
@@ -36,25 +36,31 @@
 	  -->
 	
 	<insert id="memberInsert" parameterType="memberVO">
-	insert into member(id, pass, name, age, email, phone)
+	insert into member1(id, pass, name, age, email, phone)
 	value(#{id},#{pass},#{name},#{age},#{email},#{phone})
+	</insert>
+	
+	<!-- 파일업로드가있는경우 -->
+	<insert id="memberInsertFile" parameterType="memberVO">
+	insert into member1(id, pass, name, age, email, phone,filename)
+	value(#{id},#{pass},#{name},#{age},#{email},#{phone},#{filename})
 	</insert>
 
 
 
 	<!-- parameterType은 클래스타입으로 int가 아닌 integer가 더 좋습니다. -->
 	<delete id="memberDelete" parameterType="Integer">
-	delete from member where num=#{num}
+	delete from member1 where num=#{num}
 	</delete>
 	
 	<!-- 파라메터타입을정해주는 parameterType속성과 데이터를 어떠한 VO로묶어주는지 지정해주는 resultType속성. -->
 	<select id="memberContent" parameterType="Integer" resultType="memberVO">
-	select * from member where num=#{num}
+	select * from member1 where num=#{num}
 	</select>
 	
 	
 	<update id="memberUpdate" parameterType="memberVO" >
-	update member
+	update member1
 	set age=#{age}, email=#{email}, phone=#{phone}
 	where num=#{num}
 	</update>
@@ -68,14 +74,14 @@
 	DB에서 user_name는 name로 리정되어 있습니다 DB의 member테이블.
 	 -->
 	<select id="memberLogin" parameterType="memberVO" resultType="String">
-	select name from member where id=#{id} and pass=#{pass}
+	select name from member1 where id=#{id} and pass=#{pass}
 	
 	</select>
 	
 	
 	<select id="memberDbCheck" parameterType="String" resultType="String">
 	
-	select id from member where id=#{id};
+	select id from member1 where id=#{id};
 		
 	</select>
 	

@@ -37,3 +37,4 @@ create table member1(
 	unique key(id)
 );
 
+select * from member1;
