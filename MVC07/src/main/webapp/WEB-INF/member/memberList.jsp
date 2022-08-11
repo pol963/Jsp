@@ -20,6 +20,12 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<style type="text/css">
+	table td{
+		vertical-align: middle !important;
+	}
+</style>
+
 <script type="text/javascript">
 
 	/* 
@@ -193,6 +199,7 @@ MVC07 회원 정보 관리 -> Ajax
 								<th>나이</th>
 								<th>이메일</th>
 								<th>전화번호</th>
+								<th>이미지</th>
 								<th>삭제</th>
 							</tr>
 						</thead>
@@ -206,6 +213,16 @@ MVC07 회원 정보 관리 -> Ajax
 									<td>${vo.age}</td>
 									<td>${vo.email}</td>
 									<td>${vo.phone}</td>
+									
+									<!-- 
+									if문으로 이미지가 있을때와 없을때를 구분하여 뿌려주기.
+									 -->
+									<td>
+										<c:if test="${vo.filename != null && vo.filename != ''}">
+											<img src="<c:out value='file_repo/${vo.filename}'/>" 
+											width="60px" height="60px" >
+										</c:if>
+									</td>
 									
 									<!-- 본인의 아이디와 같다면 disabled속성이 없는if문을 실행 삭제버튼활성화.
 									vo.id는 DAO에서 넘어온 id userID는 Controller에서 넘어온 id(입력한) -->

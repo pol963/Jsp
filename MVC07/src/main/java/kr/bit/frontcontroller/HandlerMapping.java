@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import kr.bit.controller.Controller;
 import kr.bit.controller.FileAddController;
+import kr.bit.controller.FileGetController;
 import kr.bit.controller.MemberAjaxDeleteController;
 import kr.bit.controller.MemberAjaxListController;
 import kr.bit.controller.MemberContentController;
@@ -44,6 +45,9 @@ public class HandlerMapping {
 		mappings.put("/memberAjaxDelete.do", new MemberAjaxDeleteController());
 		
 		mappings.put("/fileAdd.do", new FileAddController());
+		
+		//fileGet
+		mappings.put("/fileGet.do", new FileGetController());
 		
 	}
 	

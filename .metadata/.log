@@ -3427,3 +3427,204 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 12:39:13.838
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZpQFuUZl
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 12:39:13.838
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.ZpQFuUZl
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 12:39:13.839
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 12:39:13.840
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZpQFuUZl => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:12.258
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:12.258
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2685c3a2[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:12.259
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.143
+!MESSAGE Boot LS startup time from start to initialized: 6883ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.294
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.VpKVsQKvisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.295
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.295
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.296
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.296
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.297
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.VpKVsQKv => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.298
+!MESSAGE classpath=52 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.301
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv MVC07 false 52
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.302
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.304
+!MESSAGE classpath=47 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.307
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv MVC01 false 47
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.307
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.309
+!MESSAGE classpath=47 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.312
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv MVC02 false 47
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.313
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.314
+!MESSAGE classpath=48 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.316
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv MVC03 false 48
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.317
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.319
+!MESSAGE classpath=48 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.321
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv MVC04 false 48
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.322
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.323
+!MESSAGE classpath=49 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.325
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv MVC05 false 49
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.325
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.327
+!MESSAGE classpath=49 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.329
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv MVC06 false 49
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.329
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.331
+!MESSAGE classpath=47 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.332
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv TrainingMVC01 false 47
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.333
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.335
+!MESSAGE classpath=47 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.338
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv TrainingMVC02 false 47
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.338
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.340
+!MESSAGE classpath=48 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.342
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv TrainingMVC03 false 48
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.343
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.345
+!MESSAGE classpath=48 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.347
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv TrainingMVC04 false 48
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.348
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.350
+!MESSAGE classpath=18 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.351
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv TrainingWEB false 18
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.352
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.355
+!MESSAGE classpath=18 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.357
+!MESSAGE buffering callback sts4.classpath.VpKVsQKv WEB false 18
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.358
+!MESSAGE executing callback sts4.classpath.VpKVsQKv 13 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-08-10 19:35:19.985
+!MESSAGE executing callback sts4.classpath.VpKVsQKv SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2022-08-10 20:11:41.504
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-08-11 12:55:31.594
+!MESSAGE Connection to https://dist.springsource.com/release/STS/doc/updates.xml failed on 알려진 호스트가 없습니다 (dist.springsource.com). Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: 알려진 호스트가 없습니다 (dist.springsource.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1515)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1003)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:995)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:991)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

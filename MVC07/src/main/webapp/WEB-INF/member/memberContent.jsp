@@ -31,6 +31,9 @@
 	function frmreset() {
 		document.form1.reset();
 	}
+	function getFile(filename) {
+		location.href="<c:url value='/fileGet.do'/>?filename="+filename;
+	}
 	
 </script>
 
@@ -45,8 +48,11 @@ bootstrap이란 프레임워크->재사용가능한 요소의 집합.
 <h2>상세화면</h2>  
   <div class="panel panel-default">
     <div class="panel-heading">
-    	<c:if test="${sessionScope.userId != null && sessionScope.userId !='' }">
-			<lable>${sessionScope.userName}님 반갑습니다.</lable>
+    	<c:if test="${sessionScope.userId != null && sessionScope.userId !='' && sessionScope.userId == vo.id}">
+			<lable>
+			<img src='<c:out value="file_repo/${vo.filename }"/>' width="60px" height="60px" />
+			${sessionScope.userName}님 반갑습니다.
+			</lable>
 		</c:if>
 		<c:if test="${sessionScope.userId == null || sessionScope.userId =='' }">
 			<lable>반갑습니다.</lable>
@@ -93,6 +99,7 @@ bootstrap이란 프레임워크->재사용가능한 요소의 집합.
     			 id="email" name="email" value="${vo.email}" style="width: 30%">
     		</div>
     	</div>
+    	
     	<div class="form-group">
     		<label class="control-lable col-sm-2">전화번호:</label>
     		<div class="col-sm-10">
@@ -100,6 +107,31 @@ bootstrap이란 프레임워크->재사용가능한 요소의 집합.
     			 id="phone" name="phone" value="${vo.phone}" style="width: 30%">
     		</div>
     	</div>
+    	
+    	<div class="form-group">
+    		<label class="control-lable col-sm-2">첨부파일:</label>
+    		<div class="col-sm-10">
+				<input type="file" id="file" name="file" />    
+				<!-- 첨부 파일이 있는 경우에만 첨부파일이 나오게 하기. -->			
+				<c:if test="${vo.filename != null && vo.filename != '' }">
+					<a href="javascript:getFile('${vo.filename}')"><c:out value='${vo.filename }'/></a>
+				</c:if>
+				
+				<!-- 
+				리스트에서 회원인증을 하엿고 인증한 아이디와 content.jsp의 상세보기가 같다면
+				파일삭제 기능 구현. 파일이 있다면.
+				 -->
+				 <c:if test="${sessionScope.userId != null && sessionScope.userId==vo.id && 
+				 					vo.filename != null && vo.filename !=''}">
+				 		<span class="glyphicon glyphicon-remove"></span>
+				 </c:if>
+			
+			
+    		</div>
+    	</div>
+    	
+    	
+    	
     	</form>
     </div>
     
