@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import kr.bit.model.MemberDAO;
 import kr.bit.model.MemberVO;
 
+//파일이 넘어오는경우와 안넘어오는경우.
+
 public class MemberUpdateController implements Controller{
 
 	@Override
@@ -24,6 +26,12 @@ public class MemberUpdateController implements Controller{
 		
 		//묶기
 		MemberVO vo = new MemberVO();
+		//파일이 넘어온경우.
+		if(request.getParameter("mode").equals("fupdate")) {
+			String filename = request.getParameter("filename");
+			vo.setFilename(filename);
+		}
+		
 		vo.setNum(num);
 		vo.setAge(age);
 		vo.setEmail(email);
@@ -31,7 +39,19 @@ public class MemberUpdateController implements Controller{
 		
 		//DAO에서 메서드 호출.
 		MemberDAO dao = new MemberDAO();
-		int cnt = dao.memberUpdate(vo); //업데이트.
+		int cnt = -1;
+		if(request.getParameter("mode").equals("fupdate")) {//파일이 있는업데이트.
+			
+			cnt = dao.memberUpdateFile(vo);
+			
+		}else { //파일이없는업데이트
+			cnt = dao.memberUpdate(vo); //업데이트.
+		}
+		
+		
+		
+		
+		
 		
 		String nextPage = null;
 		

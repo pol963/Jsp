@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import kr.bit.controller.Controller;
 import kr.bit.controller.FileAddController;
+import kr.bit.controller.FileDelController;
 import kr.bit.controller.FileGetController;
 import kr.bit.controller.MemberAjaxDeleteController;
 import kr.bit.controller.MemberAjaxListController;
@@ -49,6 +50,8 @@ public class HandlerMapping {
 		//fileGet
 		mappings.put("/fileGet.do", new FileGetController());
 		
+		//fileDel
+		mappings.put("/fileDel.do", new FileDelController());
 	}
 	
 	//넘겨주는 메서드. mapping안에 있는값중 인자로받은key값에 해당하는 value를 리턴.

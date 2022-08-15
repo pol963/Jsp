@@ -85,6 +85,19 @@
 		
 	</select>
 	
+	<update id="memberDeleteFile" parameterType="Integer">
+	
+		update member1 set filename='' where num=#{num}
+	
+	</update>
+	
+	<!-- 파일수정이 있는 경우의 업데이트. -->
+	<update id="memberUpdateFile" parameterType="memberVO" >
+	update member1
+	set age=#{age}, email=#{email}, phone=#{phone}, filename=#{filename}
+	where num=#{num}
+	</update>
+	
 
 </mapper>
 

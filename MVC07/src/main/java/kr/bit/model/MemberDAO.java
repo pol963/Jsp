@@ -119,6 +119,27 @@ public class MemberDAO {
 		
 		return idDouble;
 	}
+	
+	//content에서 해당 회원의 파일을 삭제하는 메서드.
+	public int memberDeleteFile(int num) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = session.update("memberDeleteFile",num);
+		session.commit();
+		session.close();
+		return cnt;
+	}
+	
+	
+	//기존 회원수정하기는 파일이없는경우에만 수정이됫는데 파일이 있다면 파일을 포함하여 수정해주기.
+	public int memberUpdateFile(MemberVO vo) {
+		
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = session.update("memberUpdateFile",vo);
+		session.commit();
+		session.close();
+		return cnt;
+		
+	}
 		
 	
 }
