@@ -155,7 +155,7 @@
 	<Context docBase="C:\eGovFrame-4.0.0\workspace.edu\WEB\webapp" path="/web"/>
 		
       
-      <Context docBase="MVC07" path="/MVC07" reloadable="true" source="org.eclipse.jst.jee.server:MVC07"/></Host>
+      <Context docBase="SpringMVC01" path="/myapp" reloadable="true" source="org.eclipse.jst.jee.server:SpringMVC01"/></Host>
     </Engine>
   </Service>
 </Server>
