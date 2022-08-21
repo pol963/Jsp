@@ -11,9 +11,12 @@ import kr.bit.model.MemberDAO;
 import kr.bit.model.MemberVO;
 
 //많은 pojo를 줄이기. -> 6개의 POJO를 6개의 메서드로 변경.
-public class MemberController { //스프링으로 넘어오면서 더이상 상속X 메서드이름과 파라메터 중복.
+public class MemberController{ //스프링으로 넘어오면서 더이상 상속X 메서드이름과 파라메터 중복.
 	
-	//Content
+	//맵핑을 메서드단위로 걸어주는것.
+	
+	//Content 
+	@RequestMapping("/memberContent.do")
 	public String memberContent(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -28,6 +31,7 @@ public class MemberController { //스프링으로 넘어오면서 더이상 상�
 	
 	
 	//delete
+	@RequestMapping("/memberDelete.do")
 	public String memberDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -48,6 +52,7 @@ public class MemberController { //스프링으로 넘어오면서 더이상 상�
 	}
 	
 	//insert
+	@RequestMapping("/memberInsert.do")
 	public String memberInsert(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -83,6 +88,7 @@ public class MemberController { //스프링으로 넘어오면서 더이상 상�
 	}
 	
 	//list
+	@RequestMapping("/memberList.do")
 	public String memberList(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
@@ -101,6 +107,7 @@ public class MemberController { //스프링으로 넘어오면서 더이상 상�
 	}
 	
 	//Register
+	@RequestMapping("/memberRegister.do")
 	public String memberRegister(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -111,6 +118,7 @@ public class MemberController { //스프링으로 넘어오면서 더이상 상�
 	
 	
 	//update
+	@RequestMapping("/memberUpdate.do")
 	public String memberUpdate(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
