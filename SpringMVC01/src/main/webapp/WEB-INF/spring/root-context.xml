@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
@@ -30,6 +32,11 @@
 		<property name="locations" value="/WEB-INF/mybatis/db.properties"/>
 	</bean> 
 	
-	
+	<!-- 
+	DB관련이라 root-context 
+	스프링에서는 미리로드하는방식을 사용 -> Spring Container을 위해 아래와같이 코딩 
+	namespace추가 필요.
+	-->
+	<context:component-scan base-package="kr.bit.model" />
 		
 </beans>
