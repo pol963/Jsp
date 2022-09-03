@@ -2,6 +2,7 @@ package kr.bit.model;
 
 import java.io.InputStream;
 
+
 //MyBatis를 이용.
 
 import java.sql.*;
@@ -12,6 +13,12 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.stereotype.Repository;
+
+//@Repository 어노테이션. -> Spring Container에서 관리를 해줍니다. -> 전처리과정.
+//Spring Container에 DAO객체가 생성. 의존성을 줄이기위해. 
+//따라서 다른 클래스에서 기능을 이용할 시 Spring Container에서 사용가능.->DI(Dependency injection) 의존성주입.
+@Repository
 public class MemberDAO {
 
 	//Connection Pool기법을 이용하여 DB와 연동해서 요청을 처리하기 위한 변수 선언.

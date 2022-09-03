@@ -3,6 +3,7 @@ package kr.narp.myapp;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 //어노테어션(@)이 있다면 전처리가 먼저 됩니다.-> Spring Container
 @Controller
 public class MemberController {
@@ -10,6 +11,11 @@ public class MemberController {
 	//개별로 어노테이션으로 요청이왔을시에 처리.
 	@RequestMapping("/memberList.do")
 	public String memberList() {
+		
+		//스프링은 아래와같은 방법으로 사용X
+		//MemberDAO dao = new MemberDAO();
+		
+		
 		
 		return "memberList";
 	}
