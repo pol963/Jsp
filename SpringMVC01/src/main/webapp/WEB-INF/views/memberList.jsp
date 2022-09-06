@@ -28,7 +28,7 @@
 
 </head>
 <body>
-MVC05 예제 JDBC에서 MyBatis로.
+SpringMVC01 예제 jsp에서 Spring로.
 	<table class="table table-bordered">
 		<tr>
 			<td>번호</td>	

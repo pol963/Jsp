@@ -1,18 +1,12 @@
 package kr.bit.model;
 
-import java.io.InputStream;
-
 
 //MyBatis를 이용.
 
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 //@Repository 어노테이션. -> Spring Container에서 관리를 해줍니다. -> 전처리과정.
@@ -22,25 +16,10 @@ import org.springframework.stereotype.Repository;
 public class MemberDAO {
 
 	//Connection Pool기법을 이용하여 DB와 연동해서 요청을 처리하기 위한 변수 선언.
-	//SqlSessionFactory자료형을 변수를 선언 -> 
-	private static SqlSessionFactory sqlSessionFactory;
-	
-	//초기화 블럭 프로그램 시작후 딱 한번만 실행되는 코드.
-	
-	static { 
-		
-		try {
-			//환경설정파일을 가르키는 경로.
-		String resource = "kr/bit/mybatis/config.xml";
-		//설정읽어들이기.
-		InputStream inputStream = Resources.getResourceAsStream(resource); //읽기
-		
-		//sqlSession을 담고있는 Factory메모리공간을 가르키는 객체생성. -> build메서드를 이용하여 설정을 읽어드린걸로 객체생성.
-		sqlSessionFactory =  new SqlSessionFactoryBuilder().build(inputStream);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
+	//SqlSessionFactory자료형을 변수를 선언
+	//Spring Container에 Autowired어노테이션을 사용해 넣기.
+	@Autowired 
+	private SqlSessionFactory sqlSessionFactory;
 	
 	
 	//회원리스트 전체보기.
