@@ -36,10 +36,20 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/memberInsert.do")
-	public String memberInsert() {
+	public String memberInsert(MemberVO vo) { //파라메터 수집 -> not request.getpa....내부적으로 처리.
+		//jsp와 다르게 메서드에서 바로인자로 받아줄 수 있습니다. -> vo = new memberVO(); 내부적인 처리. memberVO클래스와 회원가입파라메터의 name가 같아야하며,기본생성자가 필수.
 		
-		return "redirect:/memberInsert";
+		//한글깨짐방지(인코딩)
+		
+		
+		//형식적인 cnt 
+		int cnt = dao.memberInsert(vo);
+		
+		
+		return "redirect:/memberList.do";
 	}
+	
+	
 	
 	@RequestMapping("/memberRegister.do")
 	public String memberRegister() {
