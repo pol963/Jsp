@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.bit.model.MemberDAO;
 import kr.bit.model.MemberVO;
@@ -57,4 +58,42 @@ public class MemberController {
 		return "memberRegister";
 	}
 	
+	@RequestMapping("/memberDelete.do")
+	//memberList에서 회원삭제시 num이 넘어오기에 파라메터로 num을 받아줍니다.
+	//변수의 이름은 원칙적으로 같아야 하나 만약 변수이름을 다르게 하고싶다면 @RequestParam어노테이션을 사용하여 num변수를 받고 다른이름의 변수에 저장합니다.
+	public String memberDelete(@RequestParam("num") int num) { 
+		int cnt = dao.memberDelete(num);
+		
+		return "redirect:/memberList.do";
+	}
+	
+	@RequestMapping("/memberContent.do")
+	public String memberContent(int num,Model model) { //Model 은 객체바인딩에 필요.
+		
+		MemberVO vo = dao.memberContent(num);
+		
+		//vo를 memberContent로 넘겨줄려면 객체 바인딩이 필요.
+		model.addAttribute("vo",vo);
+		return "memberContent";
+	}
+	
+	@RequestMapping("/memberUpdate.do")
+	public String memberUpdate(MemberVO vo) {
+		
+		int cnt =dao.memberUpdate(vo);
+		
+		return "redirect:/memberList.do";
+	}
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
