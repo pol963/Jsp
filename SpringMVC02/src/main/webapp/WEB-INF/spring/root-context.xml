@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+	<!-- MyBatis SqlsessionFactory --> <!-- 커넥션풀생성. -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/> <!-- 연결 -->
+		<!--  -->
+		<property name="configLocation" value="/WEB-INF/mybatis/config.xml" />
+		<property name="mapperLocations" value="classpath:kr/bit/mybatis/*.xml"/>
+		
+	</bean>
+		
+		
+	<!-- jdbc연결 DataSource -->
+	<!-- 아래의 properies를 참조하여 값을 넣어주는것. -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="${driver}"/>
+		<property name="url" value="${url}"/>
+		<property name="username" value="${username}"/>
+		<property name="password" value="${password}"/>
+	</bean>
+	
+	
+	<!-- db.properties 연결(mybatis에서Spring로) 객체를 참조하여 클래스를 사용하는것과 같다.-->
+	<bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="/WEB-INF/mybatis/db.properties"/>
+	</bean> 
+	
+	<!-- 
+	DB관련이라 root-context 
+	스프링에서는 미리로드하는방식을 사용 -> Spring Container을 위해 아래와같이 코딩 
+	namespace추가 필요.
+	-->
+	<context:component-scan base-package="kr.bit.model" />
+		
+</beans>
