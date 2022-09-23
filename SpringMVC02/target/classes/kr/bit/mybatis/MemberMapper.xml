@@ -2,6 +2,8 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!-- DAO대신 mapper패키지의 MemberMapper인터페이스와 연결되려면 아래의 namespace가 일치해야 합니다. -->
 <mapper namespace="kr.bit.mybatis.MemberMapper">
 
 		
